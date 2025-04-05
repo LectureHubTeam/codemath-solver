@@ -1,0 +1,5 @@
+[flake8]
+exclude = .git,data,submission
+max-line-length = 127
+select = E,F,W,C
+ignore=W503,E203

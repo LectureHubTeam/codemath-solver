@@ -1,0 +1,18 @@
+selenium
+pyautogui
+webdriver-manager
+google-generativeai
+pymupdf4llm
+streamlit
+pandas
+
+# Linting
+flake8
+black
+isort
+pre-commit
+
+# Development
+rich
+pytest
+pytest-cov

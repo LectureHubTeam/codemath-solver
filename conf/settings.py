@@ -15,7 +15,7 @@ CRAWLER = {
     "config": {
         "start_page": 1,
         "end_page": 13,
-        "delay": 1,
+        "delay": 0.75,
     },
 }
 

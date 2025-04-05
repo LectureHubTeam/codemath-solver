@@ -26,8 +26,6 @@ def get_filtered_problems(
     if sort_by in ["ac-rate", "users"]:
         df = df.sort_values(by=sort_by, ascending=ascending)
 
-    print(df[["problem-code", "ac-rate"]])
-
     problems = df["problem-code"].tolist()
     if limit > 0:
         return problems[:limit], df[:limit]

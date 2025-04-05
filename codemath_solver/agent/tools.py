@@ -9,18 +9,22 @@ from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 from codemath_solver.agent.llm import solve_problem
+from codemath_solver.utils.process_file import clear_data
 from codemath_solver.utils.process_pdf import process_ocr
 
-options = webdriver.ChromeOptions()
 
-# options.add_argument("--headless")  # Run in headless mode
-options.add_argument("--start-maximized")  # Maximize Chrome window
-# Run command: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/tmp/ChromeProfile"
-options.debugger_address = "localhost:9222"
+def __init_driver():
+    global driver
+    options = webdriver.ChromeOptions()
 
-driver = webdriver.Chrome(
-    service=Service(ChromeDriverManager().install()), options=options
-)
+    # options.add_argument("--headless")  # Run in headless mode
+    options.add_argument("--start-maximized")  # Maximize Chrome window
+    # Run command: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/tmp/ChromeProfile"
+    options.debugger_address = "localhost:9222"
+
+    driver = webdriver.Chrome(
+        service=Service(ChromeDriverManager().install()), options=options
+    )
 
 
 def __click_button(path: str, type: str = "id", wait_time: int = 10):
@@ -63,6 +67,8 @@ def submit_problem(submission_file: str):
 
 
 def start_process(problems_code: list):
+    __init_driver()
+
     URLS = [f"https://laptrinh.codemath.vn/problem/{code}" for code in problems_code]
     try:
         for index, url in enumerate(URLS):
@@ -77,11 +83,13 @@ def start_process(problems_code: list):
             submit_problem(
                 submission_file=f"/Users/NghiaKhang/Coding/Projects/codemath-solver/{output_path}"
             )
-
+    except Exception as e:
+        print(f"❌ Error: {e}")
     finally:
         driver.quit()
-        print("🎯 DONE!")
-        return True
+        clear_data("data")
+    print("🎯 DONE!")
+    return True
 
 
 if __name__ == "__main__":

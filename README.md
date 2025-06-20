@@ -7,6 +7,16 @@ A robust tool for scraping, processing, and solving coding/math problems using A
 
 ---
 
+## 📖 Watch the video demo
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=LNIItKA8Am8">
+    <img src="https://img.youtube.com/vi/LNIItKA8Am8/hqdefault.jpg" alt="Watch the video" />
+  </a>
+</p>
+
+---
+
 ## 🚀 Features
 - **Problem Crawling**: Automatically scrape problems from online platforms using Selenium-based crawlers
 - **PDF Processing**: Extract questions and metadata from PDF documents
@@ -23,23 +33,22 @@ git clone https://github.com/your-username/codemath-solver.git
 cd codemath-solver
 
 # Install dependencies
+conda create --name codemath_solver python=3.10
 pip install -r requirements.txt
 
 # Configure settings
-cp conf/settings.example.py conf/settings.py  # Create config file
+cp .env.example .env  # Create config file
 ```
 
 ---
 
 ## 🏃♂️ Usage
 ```bash
-# Run full workflow
-python app.py --crawl --process --solve
+# Run webUI with streamlit
+streamlit run app.py --server.runOnSave true
 
-# Individual components
-python app.py crawl --source=leetcode
-python app.py process --input=data/raw_problems.pdf
-python app.py solve --problem-id=123
+# Run chrome debugging profile in port 9222
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/tmp/ChromeProfile"
 ```
 
 ---
@@ -70,17 +79,8 @@ codemath-solver/
 4. Lint code with `pre-commit run --all-files`
 5. Submit PR with clear description
 
----
 
-## 📖 Documentation
-### Configuration Options
-Edit `conf/settings.py` to customize:
-```python
-# Example configuration
-CRAWL_SOURCES = ["leetcode", "codeforces"]
-MAX_PROBLEMS = 50
-SOLUTION_TIMEOUT = 30  # seconds
-```
+
 
 ---
 

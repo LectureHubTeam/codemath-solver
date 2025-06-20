@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
+model_name = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash-preview-05-20")
+
 if not api_key:
     raise Exception("Error: Gemini API Key not provided.")
 
@@ -33,7 +35,6 @@ def get_solution_from_gemini(problem_text):
     try:
         genai.configure(api_key=api_key)
 
-        model_name = "gemini-2.5-pro-exp-03-25"
         print(f"⚙️ Using Gemini model: {model_name}")
         model = genai.GenerativeModel(model_name)
 
@@ -143,35 +144,3 @@ def solve_problem(input_path: str):
         return output_path
     else:
         print("❌ No code extracted. No file will be saved.")
-
-
-def test():
-    api_key = os.getenv("GEMINI_API_KEY")
-    genai.configure(api_key=api_key)
-
-    model_name = "gemini-2.5-pro-exp-03-25"
-    print(f"⚙️ Using Gemini model: {model_name}")
-    model = genai.GenerativeModel(model_name)
-    uploaded_file = genai.upload_file(
-        path="data/chaythi_hd_bp24.pdf", display_name="dss3chaythi_hd_bp24 problem"
-    )
-    print(
-        f"✅ Uploaded file '{uploaded_file.display_name}' with URI: {uploaded_file.uri}"
-    )
-
-    prompt = f"""
-        Solve the following programming problem in Python.
-        Provide only the complete Python code within a single code block marked with ```python ... ```.
-        Do not add any explanations, greetings, or additional text outside the code block.
-
-        Problem:
-        {uploaded_file.uri}
-    """
-
-    response = model.generate_content(prompt)
-    print(response.text)
-
-
-if __name__ == "__main__":
-    api_key = os.getenv("GEMINI_API_KEY")
-    print(f"API Key: {api_key}")

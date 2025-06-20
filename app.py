@@ -1,5 +1,5 @@
 import os
-import subprocess  # To call other python scripts
+import subprocess
 
 import pandas as pd
 import streamlit as st
@@ -216,14 +216,6 @@ else:
 
     if st.button("Start Processing"):
         with st.spinner("Processing selected problems... This may take a while."):
-            st.warning(
-                (
-                    "Note: Currently calling main.py without passing selected "
-                    "problems directly. Modify main.py to accept problem codes "
-                    "as arguments or refactor its logic."
-                )
-            )
-
             # Calling without arguments for now:
             if start_process(st.session_state.selected_problems):
                 st.success("Processing script finished.")

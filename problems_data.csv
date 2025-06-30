@@ -1,570 +1,601 @@
 solved,problem-code,problem-name,category,points,ac-rate,users
-1,xqd,Xếp que diêm,Nâng cao,"1,00","18,8%",61
-1,tdsthnh,Tổng dãy số theo nhóm,Nâng cao,"1,00","21,7%",35
-1,ta_b,Tổng A đến B,Nâng cao,"1,00","34,2%",33
-1,mmceasar2,Mật mã Ceasar 2,Nâng cao,"1,00","31,5%",16
-1,socanbang_str22,Số cân bằng,Cơ bản,"1,00","31,9%",45
-1,dayso7,Tổng số chẵn,Nâng cao,"1,00","3,1%",7
-1,tongkptd,Tổng k số đầu,Cơ bản,"1,00","46,3%",40
-1,chiabi,Chia bi,Cơ bản,"1,00","29,4%",45
-1,ss4so,So sánh 4 số,Cơ bản,"1,00","49,8%",97
-1,ss3so,So sánh 3 số,Cơ bản,"1,00","60,9%",97
-1,csccung,Chữ số cuối cùng (bản dễ),Cơ bản,"1,00","31,9%",44
-1,pttsnt,Phân tích thừa số nguyên tố,Cơ bản,"1,00","36,4%",20
-1,chia7,Chia hết cho 7,Cơ bản,"1,00","35,9%",69
-1,timm,Tìm M,Cơ bản,"1,00","26,8%",36
-1,nso,N số giảm dần,Cơ bản,"1,00","35,7%",64
-0,nsochan,N số chẵn,Cơ bản,"1,00","14,5%",39
-1,nsole,N số lẻ,Cơ bản,"1,00","40,6%",84
-1,chanle,Chẵn lẻ,Cơ bản,"1,00","54,7%",167
-1,achiab,A chia B,Cơ bản,"1,00","55,2%",99
-1,sochphuong,Số chính phương,Cơ bản,"1,00","29,5%",39
-1,tachle_na_kh24,Tách lẻ,Cơ bản,"1,00","29,9%",45
--1,3slt_na23,Ba số liên tiếp,Cơ bản,"1,00","13,7%",34
--1,chaythi_ict24,Chạy thi,Cơ bản,"1,00","32,1%",35
-1,xemgio_tb24,Xem giờ,Cơ bản,"1,00","25,8%",71
-1,tangqua,Tặng quà,Cơ bản,"1,00","46,4%",163
-1,tichlonnhat_na22,Tích lớn nhất,Cơ bản,"1,00","27,3%",46
-1,chan_le,Cặp số chẵn lẻ,Cơ bản,"1,00","53,8%",53
-1,halong,Thăm vịnh Hạ Long,Cơ bản,"1,00","53,1%",46
--1,bongda,Giải bóng đá,Cơ bản,"1,00","39,8%",30
-1,gtrch_hn_sk24,Gần tròn chục,Cơ bản,"1,00","40,5%",53
-1,pheptinh_bg24,Điền phép tính,Cơ bản,"1,00","46,5%",79
-1,chiakeo_bn_qb_hy24,Chia kẹo,Cơ bản,"1,00","14,9%",43
-1,tiendien,Tiền điện,Cơ bản,"1,00","45,9%",44
--1,cuoc4g,Cước 4G,Cơ bản,"1,00","35,2%",23
--1,tiendien2,Tiền điện,Cơ bản,"1,00","29,3%",21
-1,ks_sk24,Khảo sát,Cơ bản,"1,00","25,1%",52
-0,chaythi_hd_bp24,Chạy thi,Cơ bản,"1,00","37,9%",42
-1,cd,Nghe CD,Vận dụng linh hoạt,"1,00","22,6%",22
--1,trsachmat,Trang sách bị mất,Vận dụng linh hoạt,"1,00","0,0%",0
-1,trochoi,Trò chơi,Cơ bản,"1,00","42,1%",24
--1,msachcu,Mua sách cũ,Cơ bản,"1,00","20,0%",9
-1,chonso_bg23,Chọn số,Nâng cao,"1,00","32,2%",15
-1,lambt,Làm bài tập,Nâng cao,"1,00","30,1%",18
-1,congtru,Cộng trừ,Vận dụng linh hoạt,"1,00","9,0%",6
-1,sbuoc,Đúng s bước hay không?,Vận dụng linh hoạt,"1,00","25,0%",11
-1,sasd,Số âm số dương,Cơ bản,"1,00","41,8%",49
-1,timso3_hn_sk24,Tìm số 3,Cơ bản,"1,00","38,3%",66
--1,trongcay,Trồng cây,Cơ bản,"1,00","48,7%",34
--1,dddien_str24,Đường dây điện,Vận dụng linh hoạt,"1,00","23,1%",8
--1,xephv_qg21,Xếp hình vuông,Vận dụng linh hoạt,"1,00","16,1%",5
-1,cscc_hn23,Chữ số cuối cùng,Vận dụng linh hoạt,"1,00","11,0%",17
--1,hcndep,Hình chữ nhật đẹp,Vận dụng linh hoạt,"1,00","10,6%",4
-1,ruttien,Rút tiền,Vận dụng linh hoạt,"1,00","79,2%",16
--1,bcuuchuong,Bảng cửu chương,Cơ bản,"1,00","29,6%",32
--1,caohon,Cao hơn,Cơ bản,"1,00","55,6%",25
-1,tongnso,Tổng n số,Cơ bản,"1,00","72,5%",56
-1,acongb,A cộng B,Cơ bản,"1,00","61,6%",169
-1,bvn,Bài về nhà,Cơ bản,"1,00","71,4%",61
-1,catgiay,Cắt giấy,Cơ bản,"1,00","72,7%",40
-1,laybong,Lấy bóng,Cơ bản,"1,00","47,7%",29
--1,strandau,Số trận đấu,Cơ bản,"1,00","64,1%",22
-1,sonlp_ld23,Sơn hình lập phương,Cơ bản,"1,00","41,5%",24
-1,ltrls,Số liền trước và liền sau,Cơ bản,"1,00","67,7%",47
-1,hvuong,Chu vi và diện tích hình vuông,Cơ bản,"1,00","76,7%",52
-1,thuongdu_gib23,Thương và dư,Cơ bản,"1,00","73,4%",43
--1,tong3dv,Tổng hàng đơn vị,Cơ bản,"1,00","70,2%",36
--1,schanmax,Số chẵn lớn nhất,Cơ bản,"1,00","30,7%",22
--1,doitien,Đổi tiền,Cơ bản,"1,00","38,9%",20
--1,doitgian,Đổi thời gian,Cơ bản,"1,00","45,6%",26
--1,hgach_na21,Hàng gạch,Cơ bản,"1,00","28,2%",27
-1,tsonen_na21,Tổng số nén,Nâng cao,"1,00","29,4%",9
--1,snguon_na21,Số nguồn,Vận dụng linh hoạt,"1,00","20,0%",3
-1,chlmin_na21,Chênh lệch nhỏ nhất,Nâng cao,"1,00","21,9%",7
-1,cbban_sk21,Chuẩn bị bàn,Cơ bản,"1,00","59,2%",42
--1,so1so_sk21,Số một số,Vận dụng linh hoạt,"1,00","46,9%",9
-1,demdia_sk21,Đếm đĩa,Nâng cao,"1,00","18,2%",5
--1,datsoi_sk21,Đặt sỏi,Vận dụng linh hoạt,"1,00","23,5%",8
-1,csthun_sk21,Tìm chữ số thứ N,Nâng cao,"1,00","7,1%",3
--1,tsole,Tổng số lẻ,Cơ bản,"1,00","37,4%",31
--1,tsochan,Tổng số chẵn,Cơ bản,"1,00","30,1%",21
--1,timn_d,Tìm n (bản dễ),Cơ bản,"1,00","46,0%",27
--1,beotam,Bèo tấm,Cơ bản,"1,00","39,5%",32
--1,giaithua,Giai thừa,Cơ bản,"1,00","70,9%",38
--1,hatgao,Hạt gạo và bàn cờ,Cơ bản,"1,00","15,8%",14
--1,bdso,Biến đổi số (Dãy Collatz),Cơ bản,"1,00","56,9%",33
--1,bdso_ntl24,Biến đổi,Vận dụng linh hoạt,"1,00","25,5%",13
--1,comay,Cỗ máy,Vận dụng linh hoạt,"1,00","20,8%",5
-1,stunhien,N số tăng dần,Cơ bản,"1,00","71,2%",43
--1,svuong_kv21,Diện tích hình vuông,Vận dụng linh hoạt,"1,00","10,3%",3
--1,dayso_kv21,Dãy số,Vận dụng linh hoạt,"1,00","31,7%",13
--1,demuoc,Đếm ước số,Cơ bản,"1,00","75,0%",29
--1,sohh,Số hoàn hảo,Cơ bản,"1,00","56,7%",38
--1,soae,Cặp số anh em,Cơ bản,"1,00","36,2%",16
--1,sthanthiet,Cặp số thân thiết,Cơ bản,"1,00","26,3%",9
--1,nhbng,Nhà hàng bánh ngọt,Cơ bản,"1,00","42,3%",18
--1,gcd_lcm,ƯCLN-BCNN,Cơ bản,"1,00","46,2%",32
--1,chiato,Chia tổ,Cơ bản,"1,00","40,9%",20
--1,tongps,Tổng 2 phân số,Cơ bản,"1,00","31,3%",4
--1,psmin_sk22,Phân số nhỏ nhất,Cơ bản,"1,00","33,3%",9
--1,uocle,Ước số lẻ,Cơ bản,"1,00","73,3%",9
--1,timcs,Tìm chữ số,Cơ bản,"1,00","50,0%",13
--1,tt_hc24,Tính tổng,Vận dụng linh hoạt,"1,00","25,0%",5
--1,ghepso_kv21,Ghép số,Vận dụng linh hoạt,"1,00","62,5%",3
--1,tqc_qg24,Tìm quả cân,Vận dụng linh hoạt,"1,00","35,3%",10
--1,cs0tc_mbn23,Chữ số 0 tận cùng,Vận dụng linh hoạt,"1,00","42,9%",5
--1,demso_qg21,Đếm số,Vận dụng linh hoạt,"1,00","18,2%",2
--1,timso_qg21,Tìm số,Vận dụng linh hoạt,"1,00","4,3%",1
--1,bongden_str22,Bóng đèn,Cơ bản,"1,00","77,8%",26
--1,btmin_str22,Biểu thức nhỏ nhất,Cơ bản,"1,00","57,1%",8
-1,kothichso3_str22,Không thích số 3,Nâng cao,"1,00","15,7%",7
--1,ttong_hn22,Tính tổng,Cơ bản,"1,00","73,2%",27
-1,dso_hn22,Dãy số,Nâng cao,"1,00","30,8%",29
--1,sodep_hn22,Số đẹp,Vận dụng linh hoạt,"1,00","10,5%",2
--1,demhv_hn22,Đếm hình vuông,Vận dụng linh hoạt,"1,00","20,0%",4
--1,demso_hn22,Đếm số,Vận dụng linh hoạt,"1,00","9,4%",3
-1,qdiem_hn22,Que diêm,Nâng cao,"1,00","26,7%",3
--1,tds_dn22,Tổng dãy số,Cơ bản,"1,00","39,5%",14
--1,dkt_dn22,Đếm số ký tự,Cơ bản,"1,00","52,2%",22
-1,tgso_dn22,Tam giác số,Nâng cao,"1,00","57,9%",25
-1,tinhtong_na22,Tính tổng,Nâng cao,"1,00","51,4%",17
-1,ghso_na22,Ghép số 2,Nâng cao,"1,00","40,0%",4
-1,tds_sk22,Tính tổng dãy số,Nâng cao,"1,00","28,3%",15
--1,tdcs_sk22,Thay đổi chữ số,Vận dụng linh hoạt,"1,00","14,8%",6
--1,canhhcn_mb22,Cạnh hình chữ nhật,Cơ bản,"1,00","81,8%",15
--1,tvj_mb22,Tom và Jerry,Vận dụng linh hoạt,"1,00","66,7%",2
--1,dccs_mb22,Đổi chỗ chữ số,Vận dụng linh hoạt,"1,00","2,3%",1
--1,chiakeo_mn22,Chia kẹo,Cơ bản,"1,00","33,3%",23
-1,smayman_mn22,Số may mắn,Nâng cao,"1,00","17,6%",13
--1,cscuoicung_mn22,Chữ số cuối cùng,Cơ bản,"1,00","17,6%",3
--1,chiabanh_mtr22,Chia bánh,Cơ bản,"1,00","47,6%",10
--1,xh_mtr22,Xếp hàng,Vận dụng linh hoạt,"1,00","0,0%",0
--1,sdep_mtr22,Số đẹp,Vận dụng linh hoạt,"1,00","12,5%",1
-1,xh_qg22,Xếp hình,Nâng cao,"1,00","16,7%",8
--1,dtrtr_qg22,Đèn trang trí,Vận dụng linh hoạt,"1,00","50,0%",2
-1,chh_qg22,Chia hết,Nâng cao,"1,00","18,8%",3
-1,matthu_hc23,Mật thư,Nâng cao,"1,00","66,7%",21
--1,mqua_hc23,Mua quà,Cơ bản,"1,00","71,4%",5
-1,matma_hc23,Mật mã,Nâng cao,"1,00","61,1%",21
--1,duan_lc23,Dự án,Cơ bản,"1,00","57,1%",14
--1,hoten_lc23,Họ tên,Cơ bản,"1,00","23,0%",14
--1,dso_lc23,Dãy số,Cơ bản,"1,00","46,3%",27
--1,xdomino_str23,Xếp domino,Vận dụng linh hoạt,"1,00","71,4%",5
--1,xgiongnhau_str23,Xâu giống nhau,Vận dụng linh hoạt,"1,00","10,1%",6
--1,kcohoc_str23,Khảo cổ học,Vận dụng linh hoạt,"1,00","20,0%",4
--1,cannang,Cân nặng,Cơ bản,"1,00","59,3%",15
--1,sdacbiet,Số đặc biệt,Cơ bản,"1,00","56,7%",31
--1,khuvuon_thk23,Khu vườn,Cơ bản,"1,00","81,3%",23
-1,thban_thk23,Thăm bạn,Nâng cao,"1,00","3,3%",2
--1,demnet_tk23,Đếm nét,Cơ bản,"1,00","28,8%",16
--1,bongden,Bóng đèn,Cơ bản,"1,00","26,2%",13
--1,ctru_gib23,Cộng trừ,Cơ bản,"1,00","45,5%",9
--1,sdoixung_gib23,Siêu đối xứng,Vận dụng linh hoạt,"1,00","21,6%",10
--1,muatao_hv23,Mua táo,Cơ bản,"1,00","42,3%",11
-1,xdoixung_hv23,Xâu đối xứng,Nâng cao,"1,00","29,2%",6
--1,dayso_dn_hv23,Dãy số,Cơ bản,"1,00","51,9%",13
--1,strchuc_bg23,Số tròn chục,Cơ bản,"1,00","15,6%",8
-1,ds_bg23,Dãy số,Nâng cao,"1,00","41,9%",13
--1,gnso_bg23,Giải nén số,Cơ bản,"1,00","27,3%",9
-1,dayso4,Dãy số,Nâng cao,"1,00","39,1%",15
--1,ktlientiep_na23,Ký tự liên tiếp,Cơ bản,"1,00","28,6%",2
-1,tdaycon_na23,Tổng dãy con,Nâng cao,"1,00","20,0%",5
--1,tcso_ld23,Tổng các chữ số,Cơ bản,"1,00","20,0%",2
-0,bthso_ld23,Bậc thang số,Nâng cao,"1,00","16,7%",1
-1,tongln_hn23,Tổng lớn nhất,Nâng cao,"1,00","69,4%",23
-1,mdochoi_hn23,Mua đồ chơi,Nâng cao,"1,00","31,5%",24
-1,dtgsk_hn23,Đếm tam giác,Vận dụng linh hoạt,"1,00","42,0%",26
-1,tgso_hn23,Tam giác số,Vận dụng linh hoạt,"1,00","45,5%",23
--1,dtgck_hn23,Đếm tam giác,Vận dụng linh hoạt,"1,00","34,4%",10
--1,sbenhat_hn23,Số bé nhất,Vận dụng linh hoạt,"1,00","10,0%",4
-1,ak_sk23,Ăn kẹo,Cơ bản,"1,00","65,2%",29
-1,dso_sk23,Dãy số,Nâng cao,"1,00","37,5%",7
--1,ktuthap_sk23,Kim tự tháp,Vận dụng linh hoạt,"1,00","6,4%",4
--1,vienbi_mbn23,Viên bi,Cơ bản,"1,00","30,0%",9
--1,sdxnon_mbn23,Số đối xứng dạng nón,Vận dụng linh hoạt,"1,00","11,1%",1
--1,caikeo_mtr23,Cái kẹo,Cơ bản,"1,00","27,3%",9
--1,demcs_mtr23,Đếm chữ số,Vận dụng linh hoạt,"1,00","50,0%",1
--1,nhban_mtr23,Nhân bản,Vận dụng linh hoạt,"1,00","20,0%",1
--1,sox_qg23,Số X,Vận dụng linh hoạt,"1,00","0,0%",0
--1,xoaso_qg23,Xóa số,Vận dụng linh hoạt,"1,00","0,0%",0
--1,tiso_gib24,Tỉ số,Cơ bản,"1,00","32,1%",6
-1,tccso_gib24,Tổng các chữ số,Nâng cao,"1,00","16,2%",5
-1,qlds_gib24,Quy luật dãy số,Nâng cao,"1,00","28,6%",6
--1,3stn_lt23,Ba số tự nhiên,Cơ bản,"1,00","58,5%",27
--1,4stn_lt23,Bốn số tự nhiên,Cơ bản,"1,00","40,7%",20
--1,hieucs_lt23,Hiệu chữ số,Cơ bản,"1,00","33,3%",22
-1,qlds_lt23,Quy luật dãy số,Nâng cao,"1,00","12,2%",10
--1,5stn_ts24,Năm số tự nhiên,Cơ bản,"1,00","40,6%",20
--1,skhb_ts24,Số khác biệt,Cơ bản,"1,00","83,8%",24
--1,vt_ts24,Vận tốc,Cơ bản,"1,00","23,8%",15
--1,ds_ts24,Dãy số,Vận dụng linh hoạt,"1,00","16,0%",10
-0,ds_hc24,Đếm số,Nâng cao,"1,00","33,3%",13
--1,snhnh_hc24,Số nhỏ nhất,Vận dụng linh hoạt,"1,00","6,0%",4
--1,soln,Số lớn nhất,Cơ bản,"1,00","23,5%",11
--1,tichln2,Tích lớn nhất,Cơ bản,"1,00","66,7%",7
--1,cscong,Cấp số cộng,Vận dụng linh hoạt,"1,00","42,9%",7
-1,sngto,Số nguyên tố,Nâng cao,"1,00","50,7%",34
-0,khoaso,Khóa số,Nâng cao,"1,00","5,0%",1
-1,akhtv,Ăn khế trả vàng,Vận dụng linh hoạt,"1,00","54,8%",21
--1,ghso_hv24,Ghép số,Cơ bản,"1,00","75,9%",20
--1,cstc_hv24,Chữ số tận cùng,Cơ bản,"1,00","26,1%",12
--1,cayxanh_hv24,Cây xanh,Nâng cao,"1,00","16,9%",7
--1,chnh_lc24,Chia nhóm,Vận dụng linh hoạt,"1,00","12,8%",5
--1,xepsach_lc24,Xếp sách,Cơ bản,"1,00","59,1%",13
--1,ttds_lc24,Tính tổng dãy số,Cơ bản,"1,00","62,5%",8
--1,hoandoi_str24,Hoán đổi,Cơ bản,"1,00","35,5%",24
--1,xepdiem_str24,Xếp diêm,Vận dụng linh hoạt,"1,00","33,3%",9
--1,hkpd_thk24,Hội khỏe Phù Đổng,Cơ bản,"1,00","2,9%",2
--1,xchcai_thk24,Xếp chữ cái,Cơ bản,"1,00","48,3%",12
--1,doiqua_thk24,Đổi quà,Vận dụng linh hoạt,"1,00","15,4%",8
-1,dayso_ntl24,Dãy số,Nâng cao,"1,00","41,3%",17
--1,ngaythang_ntl24,Ngày tháng,Cơ bản,"1,00","15,1%",8
--1,amstrong_ntl24,Số Amstrong,Nâng cao,"1,00","40,0%",7
--1,danhca,Đánh cá,Cơ bản,"1,00","14,3%",2
-1,thumay_bg24,Thứ mấy,Cơ bản,"1,00","34,5%",47
-1,tdayso_bg24,Tổng dãy số,Nâng cao,"1,00","12,1%",17
-1,bdso_bg24,Biến đổi số,Vận dụng linh hoạt,"1,00","20,9%",22
-1,tchanle_bn_qb_hy24,Tổng chẵn lẻ,Nâng cao,"1,00","13,5%",7
-1,tddep_bn_qb_hy24,Thời điểm đẹp,Vận dụng linh hoạt,"1,00","32,9%",23
--1,schtron_bn_qb_hy24,Số chẵn tròn,Vận dụng linh hoạt,"1,00","10,9%",5
-1,cscuoicung_dn24,Chữ số cuối cùng,Vận dụng linh hoạt,"1,00","34,9%",42
--1,xaucon_dn24,Xâu con,Cơ bản,"1,00","48,8%",26
-1,bxo_dn24,Bảng xoắn ốc,Vận dụng linh hoạt,"1,00","30,8%",24
--1,thoigian_hd_bp24,Thời gian,Cơ bản,"1,00","42,3%",26
--1,dschl_hd_bp24,Dãy số chẵn lẻ,Cơ bản,"1,00","34,4%",19
--1,mkwifi_hd_bp24,Mật khẩu Wifi,Nâng cao,"1,00","33,9%",18
--1,rutthe_na_kh24,Rút thẻ,Vận dụng linh hoạt,"1,00","15,1%",6
--1,vongso_na_kh24,Vòng số,Nâng cao,"1,00","44,6%",23
--1,sox2_na_kh24,Số x2,Vận dụng linh hoạt,"1,00","12,9%",8
--1,dtgian_qna24,Đổi thời gian,Cơ bản,"1,00","15,4%",16
--1,hv_qna24,Hình vuông,Nâng cao,"1,00","13,8%",13
--1,tso_qna24,Tách số,Vận dụng linh hoạt,"1,00","21,7%",13
--1,pi_qna24,Số pi gần đúng,Vận dụng linh hoạt,"1,00","15,2%",12
-1,chk_qni24,Chia kẹo,Cơ bản,"1,00","40,6%",59
-1,dayso_qni24,Dãy số,Cơ bản,"1,00","48,9%",51
-1,matkhau_qni24,Mật khẩu,Cơ bản,"1,00","31,1%",40
-1,timbi_qni24,Tìm bi,Vận dụng linh hoạt,"1,00","46,3%",39
--1,chqtinh_qtr24,Chọn que tính,Nâng cao,"1,00","33,3%",4
-1,dso_qtr24,Dãy số,Nâng cao,"1,00","36,8%",11
-1,timkt_qtr24,Tìm kí tự,Nâng cao,"1,00","68,8%",10
-1,dngay_tb24,Đếm ngày,Cơ bản,"1,00","25,6%",34
-1,daythang_tb24,Dãy tháng,Nâng cao,"1,00","28,9%",39
-0,sonam_tb24,Số năm,Vận dụng linh hoạt,"1,00","20,0%",4
-0,btrphthi,Bố trí phòng thi,Vận dụng linh hoạt,"1,00","0,0%",0
--1,timvitri_th24,Tìm vị trí,Vận dụng linh hoạt,"1,00","75,0%",12
--1,timso_vt24,Tìm số,Vận dụng linh hoạt,"1,00","0,0%",0
--1,ss2so,So sánh 2 số,Cơ bản,"1,00","26,4%",33
--1,t2sonn,Tổng 2 số nhỏ nhất,Cơ bản,"1,00","53,8%",13
--1,tong4p5,Tổng 4 số nhỏ nhất,Cơ bản,"1,00","55,6%",14
--1,maxmin,"Số lớn nhất, bé nhất",Cơ bản,"1,00","40,3%",23
-0,dh_kv24,Đồng hồ,Nâng cao,"1,00","25,0%",3
--1,thangmay,Thang máy,Cơ bản,"1,00","12,2%",5
--1,trchso,Trò chơi với những con số,Cơ bản,"1,00","33,3%",2
-0,xepgach,Xếp gạch,Nâng cao,"1,00","0,0%",0
--1,nhngoinha,Những ngôi nhà có ánh nắng,Vận dụng linh hoạt,"1,00","28,0%",4
--1,xephcn,Xếp hình chữ nhật,Nâng cao,"1,00","30,8%",4
--1,tiads,Tỉa dãy số,Cơ bản,"1,00","53,3%",7
--1,dotuoi,Độ tuổi,Cơ bản,"1,00","50,0%",10
--1,chiectat,Những chiếc tất,Cơ bản,"1,00","44,4%",2
--1,botoc,Bộ tộc,Nâng cao,"1,00","10,0%",1
--1,taxi,Taxi,Vận dụng linh hoạt,"1,00","14,7%",3
--1,xoaday,Xóa dãy,Vận dụng linh hoạt,"1,00","40,0%",4
--1,capdoi,Đi tìm cặp đôi,Cơ bản,"1,00","30,8%",4
-1,tinhbao,Tin tình báo,Nâng cao,"1,00","50,0%",1
--1,dietcodai,Diệt cỏ dại,Cơ bản,"1,00","42,9%",2
--1,chldiemso,Chênh lệch điểm số,Nâng cao,"1,00","28,6%",2
--1,canchi,Thiên can địa chi,Cơ bản,"1,00","61,5%",8
--1,sole,Số lẻ,Cơ bản,"1,00","28,6%",10
--1,tongkpt,Tổng k số cuối,Cơ bản,"1,00","64,7%",11
--1,tbcsochan,Trung bình cộng số chẵn,Cơ bản,"1,00","35,0%",6
--1,dchanle,Dãy chẵn lẻ,Cơ bản,"1,00","66,7%",2
--1,hinhphat,Hình phạt,Cơ bản,"1,00","88,9%",8
--1,ngaylecb,Ngày lễ công bằng,Cơ bản,"1,00","76,2%",15
--1,mecung,Mê cung,Vận dụng linh hoạt,"1,00","0,0%",0
--1,giayin,Giấy in,Cơ bản,"1,00","80,0%",30
--1,chogao,Chở gạo,Cơ bản,"1,00","87,5%",6
--1,chiatao,Chia táo,Cơ bản,"1,00","64,3%",18
--1,thomay,Thợ may,Cơ bản,"1,00","70,6%",10
-1,chiaqua_tk22,Chia quà,Cơ bản,"1,00","57,5%",40
--1,mauchu_tk22,Màu chữ,Cơ bản,"1,00","20,0%",18
--1,tong3k_tk22,Tổng 3K,Cơ bản,"1,00","60,0%",25
--1,xepbghe,Xếp bàn ghế,Cơ bản,"1,00","34,6%",18
--1,chienca,Chiên cá,Cơ bản,"1,00","9,5%",2
--1,sxmanhinh,Sản xuất màn hình,Cơ bản,"1,00","16,7%",2
--1,nguoimay,Người máy,Cơ bản,"1,00","60,0%",22
--1,mb_sk24,Mua bóng,Cơ bản,"1,00","57,1%",36
--1,cuago_ict24,Cưa gỗ,Nâng cao,"1,00","1,3%",1
--1,chia5,Chia 5,Cơ bản,"1,00","43,8%",36
--1,xoaso_na21,Xóa số,Nâng cao,"1,00","16,7%",7
--1,chiahet_hn_sk24,Chia hết,Nâng cao,"1,00","13,0%",7
--1,thumay_th24,Thứ mấy?,Cơ bản,"1,00","50,0%",11
--1,capso,Cặp số,Nâng cao,"1,00","75,0%",3
--1,chiabanh,Chia banh,Cơ bản,"1,00","20,0%",1
--1,doigiay,Đôi giày,Cơ bản,"1,00","21,9%",7
--1,hangrao,Hàng rào,Cơ bản,"1,00","100,0%",6
-1,ghephinh,Ghép hình,Nâng cao,"1,00","100,0%",5
--1,trcay,Trồng cây ăn quả,Cơ bản,"1,00","57,1%",10
--1,xepdomino,Xếp domino,Cơ bản,"1,00","25,0%",1
--1,sanbong,Sân bóng,Cơ bản,"1,00","9,5%",2
--1,trchoiqs,Trò chơi quân sự,Nâng cao,"1,00","54,5%",3
--1,lichchieuphim,Lịch chiếu phim,Nâng cao,"1,00","29,4%",5
--1,hoichoxuan,Hội chợ xuân,Cơ bản,"1,00","39,3%",11
-1,butchi,Mua bút chì,Cơ bản,"1,00","17,3%",57
--1,stkm,Siêu thị khuyến mãi,Cơ bản,"1,00","9,7%",3
--1,chiphi,Chi phí,Nâng cao,"1,00","25,9%",6
--1,muakem,Mua kem,Cơ bản,"1,00","21,4%",6
--1,kmsua,Khuyến mại sữa,Nâng cao,"1,00","38,5%",4
--1,cauthang,Cầu thang,Cơ bản,"1,00","27,0%",10
-1,chiaqua,Chia quà,Nâng cao,"1,00","9,1%",1
--1,tongket,Tổng kết,Cơ bản,"1,00","50,0%",1
--1,mungtuoi,Mừng tuổi,Cơ bản,"1,00","5,0%",1
--1,hcn,Hình chữ nhật,Cơ bản,"1,00","50,0%",3
--1,ghetso3,Ghét số 3,Cơ bản,"1,00","51,3%",18
--1,sodx,Số đối xứng,Vận dụng linh hoạt,"1,00","5,0%",1
--1,lohong,Lỗ hổng,Cơ bản,"1,00","66,7%",12
--1,quantri,Quản trị người dùng,Cơ bản,"1,00","71,4%",2
--1,banhangol,Bán hàng online,Nâng cao,"1,00","36,4%",4
--1,chiaphong,Chia phòng,Nâng cao,"1,00","26,1%",4
-1,dso1,Dãy số lẻ,Cơ bản,"1,00","61,0%",42
-1,dso2,Tổng từ 1 đến N,Cơ bản,"1,00","42,2%",95
--1,dso3,Dãy chia hết cho 4,Cơ bản,"1,00","28,0%",7
--1,dayso_bn23,Dãy số,Cơ bản,"1,00","40,0%",17
--1,dayso8,Kiểm tra số trong dãy,Cơ bản,"1,00","60,6%",19
--1,dayso9,Dãy chia hết cho 3,Cơ bản,"1,00","49,1%",20
--1,dayso10,Dãy chia hết cho 5,Cơ bản,"1,00","43,6%",17
--1,dayso11,Dãy từ a đến b,Cơ bản,"1,00","65,4%",31
--1,sokdautien,Số k đầu tiên,Cơ bản,"1,00","50,0%",3
--1,trchoidabong,Trò chơi đá bóng,Vận dụng linh hoạt,"1,00","35,3%",11
--1,stamgiac,Diện tích tam giác,Vận dụng linh hoạt,"1,00","0,0%",0
--1,ntsinhdoi,Số nguyên tố sinh đôi,Cơ bản,"1,00","4,1%",2
--1,tonguoc,Tổng ước số,Cơ bản,"1,00","44,4%",11
-0,doigio,Đổi giờ,Cơ bản,"1,00","0,0%",0
--1,sdt,Số điện thoại,Cơ bản,"1,00","28,6%",4
-1,tinhtong,Tính tổng,Cơ bản,"1,00","13,3%",2
--1,xdxung,Xâu đối xứng,Cơ bản,"1,00","56,8%",21
-1,mahoa,Mã hóa,Cơ bản,"1,00","100,0%",6
--1,teptin,Tệp tin bài nộp,Cơ bản,"1,00","25,6%",9
--1,t3so,Tổng 3 số,Cơ bản,"1,00","25,8%",21
--1,pstoigian,Phân số tối giản,Cơ bản,"1,00","26,3%",4
--1,somayman,Số may mắn,Cơ bản,"1,00","34,9%",15
--1,msthuong,Mã số thưởng,Cơ bản,"1,00","66,7%",19
--1,choicovua,Chơi cờ vua,Cơ bản,"1,00","40,0%",21
--1,xaunhiphan,Xâu nhị phân,Cơ bản,"1,00","14,7%",4
--1,bden,Bóng đèn,Nâng cao,"1,00","60,0%",6
--1,xauloi,Xâu lỗi,Nâng cao,"1,00","28,6%",4
--1,mahoamk,Mã hóa mật khẩu,Cơ bản,"1,00","61,5%",6
--1,mmceasar,Mật mã Ceasar,Nâng cao,"1,00","38,5%",10
--1,tinhdiemso,Tính điểm số,Vận dụng linh hoạt,"1,00","0,0%",0
--1,xgiongnhau2,Xâu giống nhau 2,Vận dụng linh hoạt,"1,00","57,1%",4
--1,xgiongnhau3,Xâu giống nhau 3,Vận dụng linh hoạt,"1,00","25,0%",1
--1,tboiso,Tổng bội số,Cơ bản,"1,00","35,0%",6
-1,tschan,Tổng số chẵn,Nâng cao,"1,00","61,2%",34
--1,tschan2,Tổng số chẵn 2,Nâng cao,"1,00","32,6%",15
--1,tgbi,Tam giác bi,Cơ bản,"1,00","88,2%",14
--1,timbo,Tìm bò lạc,Cơ bản,"1,00","62,9%",20
--1,muaco,Mua cỏ,Nâng cao,"1,00","83,3%",6
--1,sonha,Số nhà,Cơ bản,"1,00","52,6%",10
--1,vehv_mb22,Vẽ hình vuông,Cơ bản,"1,00","52,6%",16
--1,daytbc,Dãy trung bình cộng,Vận dụng linh hoạt,"1,00","50,0%",5
--1,cvtamgiac,Chu vi tam giác,Vận dụng linh hoạt,"1,00","50,0%",10
--1,thaptrcay,Tháp trái cây,Vận dụng linh hoạt,"1,00","55,6%",10
--1,ovuong_dn23,Ô vuông,Vận dụng linh hoạt,"1,00","58,3%",14
--1,tvtle,Tổng vị trí lẻ,Nâng cao,"1,00","61,1%",10
--1,tomau_ict24,Tô màu,Vận dụng linh hoạt,"1,00","26,7%",2
--1,demso1,Đếm số 1,Vận dụng linh hoạt,"1,00","10,9%",6
--1,demso2,Đếm số 2,Vận dụng linh hoạt,"1,00","18,8%",3
--1,demso3,Đếm số 3,Vận dụng linh hoạt,"1,00","9,5%",2
--1,tcachdeu,Tổng cách đều,Vận dụng linh hoạt,"1,00","50,0%",3
--1,ds3,Dãy số 3,Cơ bản,"1,00","34,6%",9
--1,sthn5,Số thứ N,Cơ bản,"1,00","31,4%",10
--1,bongtuyet,Bông tuyết,Vận dụng linh hoạt,"1,00","77,8%",4
--1,xoaso2,Xóa số,Vận dụng linh hoạt,"1,00","100,0%",2
--1,ds15,Dãy chẵn từ a đến b,Cơ bản,"1,00","57,1%",4
--1,hvtn,Hình vẽ thứ N,Cơ bản,"1,00","17,5%",7
-1,xkt_qn23,Xâu kí tự,Cơ bản,"1,00","5,0%",1
--1,robot,Robot,Nâng cao,"1,00","25,0%",3
--1,robotdc,Robot đồ chơi,Cơ bản,"1,00","100,0%",2
--1,xchan,Xâu chẵn,Cơ bản,"1,00","20,0%",3
--1,tenthuoc,Ghép tên thuốc,Vận dụng linh hoạt,"1,00","85,7%",6
--1,kbb2,Kéo búa bao 2,Vận dụng linh hoạt,"1,00","33,3%",1
--1,kbb1,Kéo búa bao 1,Cơ bản,"1,00","70,0%",11
--1,rbdc,Robot di chuyển,Cơ bản,"1,00","0,0%",0
-0,xoakt,Xóa ký tự,Cơ bản,"1,00","0,0%",0
--1,tmtg_hn_sk24,Tô màu tam giác,Nâng cao,"1,00","18,3%",17
--1,f_hn_sk24,Tổng dãy Fibonacci 2,Nâng cao,"1,00","20,7%",21
--1,xqd_sk24,Xếp que diêm,Nâng cao,"1,00","46,2%",24
-0,tmchc_sk24,Tô màu chữ cái,Nâng cao,"1,00","12,3%",6
--1,sthn_kv24,Số thứ N,Cơ bản,"1,00","32,9%",27
--1,dom_kv24,Đếm ô màu,Vận dụng linh hoạt,"1,00","16,7%",8
--1,trch_kv24,Trò chơi,Nâng cao,"1,00","12,5%",3
--1,sdb_kv24,Số đặc biệt,Vận dụng linh hoạt,"1,00","8,3%",1
-1,xdh_sk24,Xem đồng hồ,Nâng cao,"1,00","43,8%",21
--1,trch_qg24,Trò chơi PinBall,Vận dụng linh hoạt,"1,00","0,0%",0
--1,xqd_qg24,Xếp que diêm,Vận dụng linh hoạt,"1,00","20,0%",1
-1,vtg_qg24,Vòng tam giác,Nâng cao,"1,00","66,7%",2
-1,bdso_qg24,Biến đổi số,Vận dụng linh hoạt,"1,00","7,5%",3
--1,chvth,Chó và thỏ,Vận dụng linh hoạt,"1,00","38,5%",5
--1,ds,Dãy số,Nâng cao,"1,00","10,0%",1
-1,trchxd,Trò chơi xếp diêm,Cơ bản,"1,00","25,0%",2
--1,slnh,Số lớn nhất,Nâng cao,"1,00","20,9%",8
--1,tds2,Tổng dãy số,Cơ bản,"1,00","55,8%",26
-1,nvdsm,Những viên đá sắc màu,Cơ bản,"1,00","50,0%",2
--1,tvtle2,Tổng vị trí lẻ,Cơ bản,"1,00","46,7%",14
--1,ch3d2,Chia 3 dư 2,Cơ bản,"1,00","7,4%",2
--1,tnso2,Tổng N số,Nâng cao,"1,00","18,5%",5
--1,tgitrbt,Tính giá trị biểu thức,Nâng cao,"1,00","87,5%",5
--1,mch,Mua chuối,Cơ bản,"1,00","50,0%",2
--1,tle,Tổng lẻ từ a-b,Cơ bản,"1,00","31,6%",6
--1,cs0tc2d,Chữ số 0 cuối cùng (bản dễ),Vận dụng linh hoạt,"1,00","12,1%",3
-1,sbian,Số bí ẩn,Cơ bản,"1,00","66,7%",2
--1,kttt,Ký tự tiếp theo,Cơ bản,"1,00","46,7%",7
-1,vngh,Văn nghệ,Cơ bản,"1,00","33,3%",1
--1,cslop,Cán sự lớp,Cơ bản,"1,00","53,8%",6
-0,sbt,Số bằng tổng,Cơ bản,"1,00","50,0%",1
--1,dso20,Kiểm tra số trong dãy,Cơ bản,"1,00","14,3%",10
--1,sothun,Số thứ N,Cơ bản,"1,00","48,1%",24
--1,catchu,Cắt chữ vi tính,Nâng cao,"1,00","57,1%",3
-1,ghtg,Ghép tam giác,Nâng cao,"1,00","100,0%",2
--1,fibo,Dãy Fibonacci,Cơ bản,"1,00","35,7%",5
--1,kclt,Dãy có khoảng cách liên tiếp,Cơ bản,"1,00","40,0%",12
--1,tds5,Tổng dãy số,Cơ bản,"1,00","14,3%",5
--1,tnso,Tổng N số,Cơ bản,"1,00","45,7%",12
--1,tribonacci,Dãy Tribonacci,Cơ bản,"1,00","47,8%",24
--1,tgsfloyd,Tam giác số Floyd,Cơ bản,"1,00","21,6%",8
--1,bthang_tn22,Bậc thang,Nâng cao,"1,00","29,4%",5
--1,bhv,Bảng hình vuông,Vận dụng linh hoạt,"1,00","50,0%",7
-1,dso21,Dãy số,Nâng cao,"1,00","10,0%",1
--1,tgsdx,Tam giác số đối xứng,Nâng cao,"1,00","100,0%",2
--1,tvt,Tàu vũ trụ,Cơ bản,"1,00","33,3%",5
-0,ktso,Kiểm tra số trong dãy,Cơ bản,"1,00","0,0%",0
--1,tsh_na21tt,Tổng số hạng,Cơ bản,"1,00","60,0%",5
--1,cthong,Cây thông,Nâng cao,"1,00","33,3%",1
--1,dse,Dãy số E,Cơ bản,"1,00","25,0%",7
--1,ds22,Dãy số,Cơ bản,"1,00","66,7%",2
--1,demhv_ttna22,Đếm hình vuông,Nâng cao,"1,00","76,9%",9
--1,dkitu,Dãy ký tự,Nâng cao,"1,00","46,2%",12
--1,shuuti,Số hữu tỉ,Vận dụng linh hoạt,"1,00","0,0%",0
--1,phtthn,Phần tử thứ N,Nâng cao,"1,00","32,0%",5
-1,tnpht,Tổng N phần tử,Cơ bản,"1,00","50,0%",2
--1,tso,Tìm số,Cơ bản,"1,00","14,3%",3
--1,kcle,Dãy có khoảng cách lẻ tăng dần,Cơ bản,"1,00","33,3%",11
--1,tbph,Tổng bình phương,Nâng cao,"1,00","19,7%",13
--1,tdscd,Tổng dãy số cách đều,Nâng cao,"1,00","27,3%",11
--1,tdf,Tổng dãy Fibonacci,Nâng cao,"1,00","20,3%",16
--1,dsa_ttkv23,Dãy số A,Vận dụng linh hoạt,"1,00","14,3%",2
--1,tds6,Tổng dãy số,Nâng cao,"1,00","41,7%",5
--1,thnghs,Thử nghiệm súng,Vận dụng linh hoạt,"1,00","33,3%",1
--1,daylipon,Dãy Lipon,Nâng cao,"1,00","10,0%",1
--1,skd,Số kì diệu,Nâng cao,"1,00","26,3%",10
--1,dsoamc,Dãy số AMC,Nâng cao,"1,00","10,2%",5
--1,dsf,Dãy số F,Vận dụng linh hoạt,"1,00","23,5%",4
--1,bd,Biến đổi,Vận dụng linh hoạt,"1,00","14,3%",2
--1,dscong,Dãy số cộng,Vận dụng linh hoạt,"1,00","22,2%",2
-1,cmcc,Cá mập cắn cáp,Vận dụng linh hoạt,"1,00","19,0%",47
--1,tstrd_bd23,Tìm số trong dãy,Nâng cao,"1,00","25,4%",10
--1,timso_ld22,Tìm số,Nâng cao,"1,00","16,7%",8
--1,dsch,Đếm số chẵn,Vận dụng linh hoạt,"1,00","37,8%",11
--1,dsl2,Dãy số lặp 2,Cơ bản,"1,00","42,9%",20
--1,dsl3,Dãy số lặp 3,Cơ bản,"1,00","48,0%",11
--1,bthctr,Biểu thức cộng trừ,Cơ bản,"1,00","92,6%",25
--1,evenland,Even Land,Vận dụng linh hoạt,"1,00","12,1%",4
--1,dstr,Đánh số trang sách 1,Cơ bản,"1,00","60,0%",8
--1,dstr2,Đánh số trang sách 2,Nâng cao,"1,00","75,0%",5
--1,schs,Số chữ số,Nâng cao,"1,00","81,8%",6
--1,dstr3,Đánh số trang sách 3,Nâng cao,"1,00","50,0%",4
--1,csthn,Chữ số thứ N,Nâng cao,"1,00","12,0%",3
--1,ssieule_ict24,Số siêu lẻ,Nâng cao,"10,00","24,4%",8
--1,tcsch,Tổng chữ số là số chẵn,Nâng cao,"1,00","15,0%",2
--1,khphmk,Khôi phục mật khẩu,Nâng cao,"1,00","19,4%",7
--1,fibod,Dãy số Fibonacci,Cơ bản,"1,00","53,0%",34
--1,kcle_d,Dãy có khoảng cách lẻ tăng dần (bản dễ),Cơ bản,"1,00","80,8%",12
--1,kclt_d,Dãy có khoảng cách liên tiếp (bản dễ),Cơ bản,"1,00","56,0%",12
--1,xkt,Xóa ký tự,Vận dụng linh hoạt,"1,00","33,3%",2
--1,stchh,Số tự chia hết,Nâng cao,"1,00","42,9%",3
--1,xdx,Xâu đối xứng,Nâng cao,"1,00","66,7%",1
-1,dsck,Dãy số theo chu kỳ,Nâng cao,"1,00","32,4%",32
--1,timk,Tìm k,Nâng cao,"1,00","32,4%",8
--1,sthn2,Số thứ N,Cơ bản,"1,00","41,0%",14
--1,sthn3,Số thứ N của dãy,Cơ bản,"1,00","33,3%",7
--1,timx,Tìm x,Nâng cao,"1,00","11,1%",1
--1,bdso2,Biến đổi số,Nâng cao,"1,00","62,0%",13
--1,boi45,Bội của 45,Nâng cao,"1,00","32,0%",7
--1,solnh,Số lớn nhất,Nâng cao,"1,00","14,3%",1
-1,sslcb,Số Siêu lẻ Cân bằng,Nâng cao,"1,00","11,1%",2
-0,sgmm,Số gần may mắn,Nâng cao,"1,00","0,0%",0
--1,schphdx,Số chính phương đối xứng,Nâng cao,"1,00","33,3%",1
--1,sthn4,Số thứ N,Vận dụng linh hoạt,"1,00","28,0%",6
-0,bsx18,Biển số xe 18,Nâng cao,"1,00","14,6%",34
-0,chiahet2,Chia hết,Cơ bản,"1,00","0,0%",0
--1,xoanocso,Xoắn ốc số,Vận dụng linh hoạt,"1,00","33,3%",3
--1,dkt,Dãy kí tự,Nâng cao,"1,00","22,2%",2
--1,dscm,Dãy số CM,Nâng cao,"1,00","31,7%",11
--1,dsba,Dãy số bí ẩn,Nâng cao,"1,00","11,9%",8
--1,xcddc,Xâu có độ dài chẵn,Cơ bản,"1,00","38,5%",10
--1,sdn,Số duyên nợ,Cơ bản,"1,00","51,4%",16
--1,ts,Tìm số,Cơ bản,"1,00","64,3%",7
-1,5ktcc,5 kí tự cuối cùng,Cơ bản,"1,00","43,3%",12
--1,dcs,Đếm chữ số,Cơ bản,"1,00","62,1%",17
--1,dcc,Đếm chữ cái,Cơ bản,"1,00","61,1%",10
--1,nenxau,Nén xâu,Cơ bản,"1,00","66,7%",5
--1,xktginh,Xóa ký tự giống nhau,Cơ bản,"1,00","23,1%",3
--1,xktlkginh,Xóa ký tự liền kề giống nhau,Cơ bản,"1,00","71,4%",5
--1,hphat,Hình phạt,Cơ bản,"1,00","36,4%",8
--1,boi45_2,Bội của 45 (2),Nâng cao,"1,00","20,9%",7
-1,dstr4,Đánh số trang sách 4,Nâng cao,"1,00","21,4%",2
--1,tlmax,Tích lẻ lớn nhất,Vận dụng linh hoạt,"1,00","37,5%",3
--1,kchiahet,Không chia hết,Vận dụng linh hoạt,"1,00","25,0%",1
--1,chhvskchh,Chia hết và không chia hết,Cơ bản,"1,00","33,3%",9
--1,oddsum,Odd sum,Vận dụng linh hoạt,"1,00","45,5%",3
--1,schmin,Số chẵn nhỏ nhất,Nâng cao,"1,00","47,6%",9
--1,chh3,Chia hết cho 3,Nâng cao,"1,00","36,7%",10
-0,chh6,Chia hết cho 6,Nâng cao,"1,00","0,0%",0
--1,songuon2,Số nguồn 2,Vận dụng linh hoạt,"1,00","0,0%",0
--1,chdthd,Chọn đội thi đấu,Cơ bản,"1,00","27,3%",4
--1,cs0tc2k,Chữ số 0 cuối cùng (bản khó),Vận dụng linh hoạt,"1,00","19,0%",4
--1,hatde,Nhặt hạt dẻ,Cơ bản,"1,00","19,2%",5
--1,sln5,Số lớn nhất chia hết cho 5,Vận dụng linh hoạt,"1,00","22,0%",9
--1,sln4,Số lớn nhất chia hết cho 4,Vận dụng linh hoạt,"1,00","50,0%",5
--1,snn10,Số nhỏ nhất chia hết cho 10,Vận dụng linh hoạt,"1,00","25,7%",8
--1,sln2,Số lớn nhất chia hết cho 2,Vận dụng linh hoạt,"1,00","25,0%",6
--1,sthn6,Số thứ N,Nâng cao,"1,00","33,3%",12
--1,lambt2,Làm bài tập,Nâng cao,"1,00","27,3%",3
--1,ds01,Dãy số 0-1,Nâng cao,"1,00","25,0%",6
--1,dsthnh,Dãy số theo nhóm,Nâng cao,"1,00","56,5%",12
--1,moonwalk,Vũ điệu Mặt trăng,Nâng cao,"1,00","7,1%",1
--1,dthcn,Diện tích hình chữ nhật,Vận dụng linh hoạt,"1,00","27,8%",5
-1,rbthl_dn_tk25,Robot thất lạc,Cơ bản,"1,00","44,9%",57
--1,ankhe_thk25,Ăn khế trả vàng,Cơ bản,"1,00","18,4%",36
-1,demkt_thk25,Đếm ký tự,Nâng cao,"1,00","46,4%",40
-1,phchh_dn_nghs25,Phép chia hết,Cơ bản,"1,00","28,9%",84
-1,tvtr_nghs25,Tìm vị trí,Nâng cao,"1,00","40,5%",90
--1,thvt,Tín hiệu từ vũ trụ,Cơ bản,"1,00","9,5%",27
-1,ds_nghs25,Dãy số,Nâng cao,"1,00","37,7%",73
-1,saban_lc25,Sa bàn,Cơ bản,"1,00","53,0%",138
-1,nchd_lc25,Nét chạm mặt đất,Cơ bản,"1,00","63,9%",136
-1,tongds_lc25,Tổng dãy số,Cơ bản,"1,00","27,3%",94
-0,dss3,Dãy số S,Nâng cao,"10,00","2,5%",9
-0,mv,Mua vở,Vận dụng linh hoạt,"1,00","5,9%",42
-1,tachso,Tách số,Cơ bản,"1,00","15,7%",101
--1,3hk,Ba hộp kẹo,Cơ bản,"1,00","64,3%",15
--1,bee,Tổ ong,Nâng cao,"1,00","9,1%",1
-0,dcnt,Đôi cánh nữ thần,Vận dụng linh hoạt,"1,00","17,7%",49
-1,dt_str25,Diện tích,Cơ bản,"1,00","64,5%",107
-1,trs_str25,Trang sách,Cơ bản,"1,00","38,2%",90
-1,haitao_str25,Hái táo,Vận dụng linh hoạt,"1,00","21,8%",49
-0,stron_str25,Số tròn,Vận dụng linh hoạt,"1,00","17,9%",23
-1,chv_hn_ntl25,Chu vi,Cơ bản,"1,00","67,4%",114
-1,tln_hn_ntl25,Tích lớn nhất,Cơ bản,"1,00","32,4%",59
-1,ds_hn_ntl25,Dãy số,Cơ bản,"1,00","40,8%",72
--1,dt_hn_ntl25,Đoạn thẳng,Cơ bản,"1,00","26,2%",34
--1,tlt_bdi24,Tổng liên tiếp,Vận dụng linh hoạt,"1,00","100,0%",2
--1,ds_na_dl22,Dãy số,Cơ bản,"1,00","25,0%",2
--1,ds_hoalu25,Dãy số,Cơ bản,"1,00","25,0%",4
-1,dhang_qn_dtr25,Đơn hàng,Cơ bản,"1,00","56,6%",105
-1,dcho_qn_dtr25,Đổi chỗ,Cơ bản,"1,00","39,1%",46
-1,chlech_qn_dtr25,Chênh lệch,Cơ bản,"1,00","57,6%",74
-1,ghcap_qn_dtr25,Ghép cặp,Cơ bản,"1,00","82,7%",44
-1,ts_hv25,Tặng sữa,Cơ bản,"1,00","47,0%",90
-1,dph_hv25,Đồng phục,Cơ bản,"1,00","63,0%",83
-1,tv_hv25,Từ vựng,Nâng cao,"1,00","9,6%",32
--1,xcs,Xóa chữ số,Vận dụng linh hoạt,"1,00","40,0%",2
-1,trc_sk1_25,Trồng cây,Cơ bản,"1,00","64,8%",131
-1,mb_sk1_25,Tô màu bóng,Cơ bản,"1,00","19,0%",62
-1,tmbc_sk1_25,Tô màu bàn cờ,Cơ bản,"1,00","28,2%",62
-1,tds_sk1_25,Tổng dãy số,Nâng cao,"1,00","17,5%",70
-1,mm_sk1_25,Mật mã,Nâng cao,"1,00","43,2%",53
--1,xcab,Xâu con a-b,Cơ bản,"1,00","50,0%",8
--1,xxcab,Xóa xâu con a-b,Cơ bản,"1,00","57,1%",4
--1,xcdn,Xâu con dài nhất,Cơ bản,"1,00","33,3%",2
-1,tgx,Tam giác xâu,Nâng cao,"1,00","100,0%",1
+0,skylab_vt25,Số kỳ lạ (b),Vận dụng linh hoạt,"1,00","8,6%",33
+1,xqd,Xếp que diêm,Nâng cao,"1,00","24,5%",156
+1,tdsthnh,Tổng dãy số theo nhóm,Nâng cao,"1,00","30,2%",94
+1,snn6,Số nhỏ nhất chia hết cho 6,Vận dụng linh hoạt,"1,00","11,4%",24
+1,ta_b,Tổng A đến B,Nâng cao,"1,00","29,0%",102
+1,mmceasar2,Mật mã Ceasar 2,Nâng cao,"1,00","23,7%",47
+1,socanbang_str22,Số cân bằng,Cơ bản,"1,00","38,5%",156
+1,dayso7,Tổng số chẵn,Nâng cao,"1,00","14,1%",64
+1,tongkptd,Tổng k số đầu,Cơ bản,"1,00","56,1%",140
+1,chiabi,Chia bi,Cơ bản,"1,00","41,4%",159
+1,ss4so,So sánh 4 số,Cơ bản,"1,00","61,9%",248
+1,ss3so,So sánh 3 số,Cơ bản,"1,00","69,5%",237
+1,csccung,Chữ số cuối cùng (bản dễ),Cơ bản,"1,00","41,2%",154
+1,pttsnt,Phân tích thừa số nguyên tố,Cơ bản,"1,00","42,1%",70
+1,chia7,Chia hết cho 7,Cơ bản,"1,00","39,5%",185
+1,timm,Tìm M,Cơ bản,"1,00","30,8%",113
+1,nso,N số giảm dần,Cơ bản,"1,00","43,3%",166
+0,nsochan,N số chẵn,Cơ bản,"1,00","17,4%",134
+1,nsole,N số lẻ,Cơ bản,"1,00","45,3%",179
+1,chanle,Chẵn lẻ,Cơ bản,"1,00","60,9%",317
+1,achiab,A chia B,Cơ bản,"1,00","59,8%",277
+1,sochphuong,Số chính phương,Cơ bản,"1,00","34,8%",155
+1,tachle_na_kh24,Tách lẻ,Cơ bản,"1,00","37,7%",227
+1,3slt_na23,Ba số liên tiếp,Cơ bản,"1,00","28,0%",189
+1,chaythi_ict24,Chạy thi,Cơ bản,"1,00","32,9%",169
+1,xemgio_tb24,Xem giờ,Cơ bản,"1,00","34,0%",261
+1,tangqua,Tặng quà,Cơ bản,"1,00","53,4%",316
+1,tichlonnhat_na22,Tích lớn nhất,Cơ bản,"1,00","27,5%",165
+1,chan_le,Cặp số chẵn lẻ,Cơ bản,"1,00","55,3%",177
+1,halong,Thăm vịnh Hạ Long,Cơ bản,"1,00","66,1%",178
+1,bongda,Giải bóng đá,Cơ bản,"1,00","42,1%",123
+1,gtrch_hn_sk24,Gần tròn chục,Cơ bản,"1,00","48,3%",206
+1,pheptinh_bg24,Điền phép tính,Cơ bản,"1,00","56,2%",217
+1,chiakeo_bn_qb_hy24,Chia kẹo,Cơ bản,"1,00","26,0%",201
+1,tiendien,Tiền điện,Cơ bản,"1,00","49,0%",167
+1,cuoc4g,Cước 4G,Cơ bản,"1,00","24,0%",83
+0,tiendien2,Tiền điện,Cơ bản,"1,00","31,6%",74
+1,ks_sk24,Khảo sát,Cơ bản,"1,00","27,4%",156
+0,chaythi_hd_bp24,Chạy thi,Cơ bản,"1,00","58,3%",184
+1,cd,Nghe CD,Vận dụng linh hoạt,"1,00","24,9%",59
+1,trsachmat,Trang sách bị mất,Vận dụng linh hoạt,"1,00","7,4%",36
+1,trochoi,Trò chơi,Cơ bản,"1,00","50,0%",96
+1,msachcu,Mua sách cũ,Cơ bản,"1,00","25,0%",42
+1,chonso_bg23,Chọn số,Nâng cao,"1,00","20,8%",64
+1,lambt,Làm bài tập,Nâng cao,"1,00","33,2%",73
+1,congtru,Cộng trừ,Vận dụng linh hoạt,"1,00","5,9%",15
+1,sbuoc,Đúng s bước hay không?,Vận dụng linh hoạt,"1,00","32,2%",63
+1,sasd,Số âm số dương,Cơ bản,"1,00","46,1%",173
+1,timso3_hn_sk24,Tìm số 3,Cơ bản,"1,00","39,0%",197
+1,trongcay,Trồng cây,Cơ bản,"1,00","46,8%",118
+1,dddien_str24,Đường dây điện,Vận dụng linh hoạt,"1,00","17,5%",28
+1,xephv_qg21,Xếp hình vuông,Vận dụng linh hoạt,"1,00","26,9%",30
+1,cscc_hn23,Chữ số cuối cùng,Vận dụng linh hoạt,"1,00","22,5%",72
+1,hcndep,Hình chữ nhật đẹp,Vận dụng linh hoạt,"1,00","15,3%",15
+1,ruttien,Rút tiền,Vận dụng linh hoạt,"1,00","71,1%",77
+1,bcuuchuong,Bảng cửu chương,Cơ bản,"1,00","39,2%",110
+1,caohon,Cao hơn,Cơ bản,"1,00","52,4%",101
+1,tongnso,Tổng n số,Cơ bản,"1,00","66,8%",143
+1,acongb,A cộng B,Cơ bản,"1,00","75,3%",362
+1,bvn,Bài về nhà,Cơ bản,"1,00","84,4%",228
+1,catgiay,Cắt giấy,Cơ bản,"1,00","65,1%",157
+1,laybong,Lấy bóng,Cơ bản,"1,00","63,4%",182
+1,strandau,Số trận đấu,Cơ bản,"1,00","74,2%",119
+1,sonlp_ld23,Sơn hình lập phương,Cơ bản,"1,00","37,8%",91
+1,ltrls,Số liền trước và liền sau,Cơ bản,"1,00","72,5%",213
+1,hvuong,Chu vi và diện tích hình vuông,Cơ bản,"1,00","75,8%",207
+1,thuongdu_gib23,Thương và dư,Cơ bản,"1,00","76,1%",212
+1,tong3dv,Tổng hàng đơn vị,Cơ bản,"1,00","68,8%",163
+1,schanmax,Số chẵn lớn nhất,Cơ bản,"1,00","42,2%",131
+1,doitien,Đổi tiền,Cơ bản,"1,00","52,8%",125
+1,doitgian,Đổi thời gian,Cơ bản,"1,00","61,6%",130
+1,hgach_na21,Hàng gạch,Cơ bản,"1,00","37,1%",169
+1,tsonen_na21,Tổng số nén,Nâng cao,"1,00","25,9%",37
+1,snguon_na21,Số nguồn,Vận dụng linh hoạt,"1,00","47,7%",44
+1,chlmin_na21,Chênh lệch nhỏ nhất,Nâng cao,"1,00","29,0%",30
+1,cbban_sk21,Chuẩn bị bàn,Cơ bản,"1,00","60,0%",136
+1,so1so_sk21,Số một số,Vận dụng linh hoạt,"1,00","41,1%",69
+1,demdia_sk21,Đếm đĩa,Nâng cao,"1,00","17,5%",33
+1,datsoi_sk21,Đặt sỏi,Vận dụng linh hoạt,"1,00","30,5%",56
+1,csthun_sk21,Tìm chữ số thứ N,Nâng cao,"1,00","11,0%",22
+1,tsole,Tổng số lẻ,Cơ bản,"1,00","43,1%",100
+1,tsochan,Tổng số chẵn,Cơ bản,"1,00","37,6%",82
+1,timn_d,Tìm n (bản dễ),Cơ bản,"1,00","37,5%",69
+0,beotam,Bèo tấm,Cơ bản,"1,00","63,6%",108
+1,giaithua,Giai thừa,Cơ bản,"1,00","79,6%",101
+1,hatgao,Hạt gạo và bàn cờ,Cơ bản,"1,00","53,0%",92
+1,bdso,Biến đổi số (Dãy Collatz),Cơ bản,"1,00","60,2%",99
+1,bdso_ntl24,Biến đổi,Vận dụng linh hoạt,"1,00","31,6%",38
+1,comay,Cỗ máy,Vận dụng linh hoạt,"1,00","37,5%",21
+1,stunhien,N số tăng dần,Cơ bản,"1,00","74,0%",116
+1,svuong_kv21,Diện tích hình vuông,Vận dụng linh hoạt,"1,00","34,3%",30
+1,dayso_kv21,Dãy số,Vận dụng linh hoạt,"1,00","25,6%",44
+1,demuoc,Đếm ước số,Cơ bản,"1,00","65,1%",91
+1,sohh,Số hoàn hảo,Cơ bản,"1,00","60,9%",94
+1,soae,Cặp số anh em,Cơ bản,"1,00","39,0%",57
+1,sthanthiet,Cặp số thân thiết,Cơ bản,"1,00","27,1%",32
+1,nhbng,Nhà hàng bánh ngọt,Cơ bản,"1,00","35,2%",47
+1,gcd_lcm,ƯCLN-BCNN,Cơ bản,"1,00","54,7%",100
+1,chiato,Chia tổ,Cơ bản,"1,00","22,7%",40
+1,tongps,Tổng 2 phân số,Cơ bản,"1,00","24,4%",23
+1,psmin_sk22,Phân số nhỏ nhất,Cơ bản,"1,00","37,5%",53
+1,uocle,Ước số lẻ,Cơ bản,"1,00","55,9%",68
+1,timcs,Tìm chữ số,Cơ bản,"1,00","52,9%",66
+1,tt_hc24,Tính tổng,Vận dụng linh hoạt,"1,00","42,2%",26
+1,ghepso_kv21,Ghép số,Vận dụng linh hoạt,"1,00","27,9%",25
+1,tqc_qg24,Tìm quả cân,Vận dụng linh hoạt,"1,00","24,8%",47
+1,cs0tc_mbn23,Chữ số 0 tận cùng,Vận dụng linh hoạt,"1,00","30,7%",46
+1,demso_qg21,Đếm số,Vận dụng linh hoạt,"1,00","21,6%",29
+0,timso_qg21,Tìm số,Vận dụng linh hoạt,"1,00","11,5%",18
+1,bongden_str22,Bóng đèn,Cơ bản,"1,00","85,1%",114
+1,btmin_str22,Biểu thức nhỏ nhất,Cơ bản,"1,00","69,0%",74
+1,kothichso3_str22,Không thích số 3,Nâng cao,"1,00","18,6%",23
+1,ttong_hn22,Tính tổng,Cơ bản,"1,00","73,7%",172
+1,dso_hn22,Dãy số,Nâng cao,"1,00","32,5%",58
+1,sodep_hn22,Số đẹp,Vận dụng linh hoạt,"1,00","31,9%",36
+1,demhv_hn22,Đếm hình vuông,Vận dụng linh hoạt,"1,00","32,6%",40
+1,demso_hn22,Đếm số,Vận dụng linh hoạt,"1,00","29,8%",34
+1,qdiem_hn22,Que diêm,Nâng cao,"1,00","24,6%",10
+1,tds_dn22,Tổng dãy số,Cơ bản,"1,00","49,4%",75
+1,dkt_dn22,Đếm số ký tự,Cơ bản,"1,00","46,0%",67
+1,tgso_dn22,Tam giác số,Nâng cao,"1,00","63,6%",61
+1,tinhtong_na22,Tính tổng,Nâng cao,"1,00","50,3%",60
+1,ghso_na22,Ghép số 2,Nâng cao,"1,00","24,3%",32
+1,tds_sk22,Tính tổng dãy số,Nâng cao,"1,00","22,7%",30
+-1,tdcs_sk22,Thay đổi chữ số,Vận dụng linh hoạt,"1,00","29,3%",22
+1,canhhcn_mb22,Cạnh hình chữ nhật,Cơ bản,"1,00","80,4%",106
+1,tvj_mb22,Tom và Jerry,Vận dụng linh hoạt,"1,00","27,8%",34
+1,dccs_mb22,Đổi chỗ chữ số,Vận dụng linh hoạt,"1,00","14,5%",15
+1,chiakeo_mn22,Chia kẹo,Cơ bản,"1,00","36,8%",88
+1,smayman_mn22,Số may mắn,Nâng cao,"1,00","23,7%",52
+1,cscuoicung_mn22,Chữ số cuối cùng,Cơ bản,"1,00","36,3%",29
+1,chiabanh_mtr22,Chia bánh,Cơ bản,"1,00","56,4%",74
+0,xh_mtr22,Xếp hàng,Vận dụng linh hoạt,"1,00","25,5%",29
+1,sdep_mtr22,Số đẹp 2,Vận dụng linh hoạt,"1,00","42,5%",31
+1,xh_qg22,Xếp hình,Nâng cao,"1,00","24,3%",31
+1,dtrtr_qg22,Đèn trang trí,Vận dụng linh hoạt,"1,00","34,4%",23
+1,chh_qg22,Chia hết,Nâng cao,"1,00","16,8%",8
+1,matthu_hc23,Mật thư,Nâng cao,"1,00","69,3%",65
+0,mqua_hc23,Mua quà,Cơ bản,"1,00","45,2%",18
+1,matma_hc23,Mật mã,Nâng cao,"1,00","48,6%",62
+1,duan_lc23,Dự án,Cơ bản,"1,00","61,0%",75
+1,hoten_lc23,Họ tên,Cơ bản,"1,00","35,9%",76
+1,dso_lc23,Dãy số,Cơ bản,"1,00","66,3%",82
+1,xdomino_str23,Xếp domino,Vận dụng linh hoạt,"1,00","88,9%",23
+1,xgiongnhau_str23,Xâu giống nhau,Vận dụng linh hoạt,"1,00","19,1%",25
+1,kcohoc_str23,Khảo cổ học,Vận dụng linh hoạt,"1,00","26,3%",19
+1,cannang,Cân nặng,Cơ bản,"1,00","60,0%",54
+1,sdacbiet,Số đặc biệt,Cơ bản,"1,00","69,6%",79
+1,khuvuon_thk23,Khu vườn,Cơ bản,"1,00","70,2%",74
+1,thban_thk23,Thăm bạn,Nâng cao,"1,00","4,7%",9
+0,demnet_tk23,Đếm nét,Cơ bản,"1,00","28,1%",51
+1,bongden,Bóng đèn,Cơ bản,"1,00","37,3%",50
+1,ctru_gib23,Cộng trừ,Cơ bản,"1,00","58,6%",95
+1,sdoixung_gib23,Siêu đối xứng,Vận dụng linh hoạt,"1,00","25,1%",36
+1,muatao_hv23,Mua táo,Cơ bản,"1,00","22,1%",26
+1,xdoixung_hv23,Xâu đối xứng,Nâng cao,"1,00","27,5%",13
+1,dayso_dn_hv23,Dãy số,Cơ bản,"1,00","60,2%",43
+1,strchuc_bg23,Số tròn chục,Cơ bản,"1,00","15,6%",70
+1,ds_bg23,Dãy số,Nâng cao,"1,00","29,3%",28
+1,gnso_bg23,Giải nén số,Cơ bản,"1,00","44,4%",51
+1,dayso4,Dãy số,Nâng cao,"1,00","29,4%",28
+1,ktlientiep_na23,Ký tự liên tiếp,Cơ bản,"1,00","31,6%",34
+1,tdaycon_na23,Tổng dãy con,Nâng cao,"1,00","22,0%",39
+1,tcso_ld23,Tổng các chữ số,Cơ bản,"1,00","54,3%",37
+0,bthso_ld23,Bậc thang số,Nâng cao,"1,00","52,8%",13
+1,tongln_hn23,Tổng lớn nhất,Nâng cao,"1,00","60,3%",103
+1,mdochoi_hn23,Mua đồ chơi,Nâng cao,"1,00","21,5%",62
+1,dtgsk_hn23,Đếm tam giác,Vận dụng linh hoạt,"1,00","54,8%",106
+1,tgso_hn23,Tam giác số,Vận dụng linh hoạt,"1,00","49,7%",69
+1,dtgck_hn23,Đếm tam giác,Vận dụng linh hoạt,"1,00","34,4%",56
+1,sbenhat_hn23,Số bé nhất,Vận dụng linh hoạt,"1,00","15,3%",25
+1,ak_sk23,Ăn kẹo,Cơ bản,"1,00","58,0%",86
+1,dso_sk23,Dãy số,Nâng cao,"1,00","19,6%",32
+1,ktuthap_sk23,Kim tự tháp,Vận dụng linh hoạt,"1,00","15,2%",48
+1,vienbi_mbn23,Viên bi,Cơ bản,"1,00","32,8%",65
+1,sdxnon_mbn23,Số đối xứng dạng nón,Vận dụng linh hoạt,"1,00","20,3%",26
+1,caikeo_mtr23,Cái kẹo,Cơ bản,"1,00","37,0%",73
+1,demcs_mtr23,Đếm chữ số,Vận dụng linh hoạt,"1,00","22,8%",37
+1,nhban_mtr23,Nhân bản,Vận dụng linh hoạt,"1,00","16,2%",20
+1,sox_qg23,Số X,Vận dụng linh hoạt,"1,00","20,8%",37
+1,xoaso_qg23,Xóa số,Vận dụng linh hoạt,"1,00","36,7%",34
+-1,xdung_qg23,Xây dựng,Vận dụng linh hoạt,"1,00","25,8%",19
+1,tiso_gib24,Tỉ số,Cơ bản,"1,00","23,2%",55
+1,tccso_gib24,Tổng các chữ số,Nâng cao,"1,00","14,5%",18
+1,qlds_gib24,Quy luật dãy số,Nâng cao,"1,00","17,8%",34
+1,3stn_lt23,Ba số tự nhiên,Cơ bản,"1,00","66,3%",114
+1,4stn_lt23,Bốn số tự nhiên,Cơ bản,"1,00","34,5%",62
+0,hieucs_lt23,Hiệu chữ số,Cơ bản,"1,00","42,9%",56
+1,qlds_lt23,Quy luật dãy số,Nâng cao,"1,00","20,5%",28
+1,5stn_ts24,Năm số tự nhiên,Cơ bản,"1,00","58,4%",87
+1,skhb_ts24,Số khác biệt,Cơ bản,"1,00","79,9%",103
+0,vt_ts24,Vận tốc,Cơ bản,"1,00","23,2%",54
+1,ds_ts24,Dãy số,Vận dụng linh hoạt,"1,00","19,8%",47
+0,ds_hc24,Đếm số,Nâng cao,"1,00","40,8%",35
+1,snhnh_hc24,Số nhỏ nhất,Vận dụng linh hoạt,"1,00","12,8%",24
+0,soln,Số lớn nhất,Cơ bản,"1,00","37,1%",41
+1,tichln2,Tích lớn nhất,Cơ bản,"1,00","52,6%",38
+1,cscong,Cấp số cộng,Vận dụng linh hoạt,"1,00","29,2%",26
+1,sngto,Số nguyên tố,Nâng cao,"1,00","44,0%",78
+0,khoaso,Khóa số,Nâng cao,"1,00","10,4%",5
+1,akhtv,Ăn khế trả vàng,Vận dụng linh hoạt,"1,00","54,5%",58
+1,ghso_hv24,Ghép số,Cơ bản,"1,00","77,0%",125
+1,cstc_hv24,Chữ số tận cùng,Cơ bản,"1,00","24,8%",82
+1,cayxanh_hv24,Cây xanh,Nâng cao,"1,00","28,3%",48
+1,chnh_lc24,Chia nhóm,Vận dụng linh hoạt,"1,00","25,8%",77
+1,xepsach_lc24,Xếp sách,Cơ bản,"1,00","59,5%",91
+1,ttds_lc24,Tính tổng dãy số,Cơ bản,"1,00","45,8%",67
+1,hoandoi_str24,Hoán đổi,Cơ bản,"1,00","47,1%",62
+0,xepdiem_str24,Xếp diêm,Vận dụng linh hoạt,"1,00","24,4%",16
+1,hkpd_thk24,Hội khỏe Phù Đổng,Cơ bản,"1,00","26,8%",54
+1,xchcai_thk24,Xếp chữ cái,Cơ bản,"1,00","52,5%",48
+1,doiqua_thk24,Đổi quà,Vận dụng linh hoạt,"1,00","17,3%",52
+1,dayso_ntl24,Dãy số,Nâng cao,"1,00","37,9%",41
+1,ngaythang_ntl24,Ngày tháng,Cơ bản,"1,00","17,8%",28
+1,amstrong_ntl24,Số Amstrong,Nâng cao,"1,00","39,1%",20
+1,danhca,Đánh cá,Cơ bản,"1,00","20,2%",15
+1,thumay_bg24,Thứ mấy,Cơ bản,"1,00","39,4%",128
+1,tdayso_bg24,Tổng dãy số,Nâng cao,"1,00","16,9%",74
+1,bdso_bg24,Biến đổi số,Vận dụng linh hoạt,"1,00","18,7%",60
+1,tchanle_bn_qb_hy24,Tổng chẵn lẻ,Nâng cao,"1,00","18,9%",23
+1,tddep_bn_qb_hy24,Thời điểm đẹp,Vận dụng linh hoạt,"1,00","41,4%",91
+1,schtron_bn_qb_hy24,Số chẵn tròn,Vận dụng linh hoạt,"1,00","12,6%",21
+1,cscuoicung_dn24,Chữ số cuối cùng,Vận dụng linh hoạt,"1,00","27,3%",92
+1,xaucon_dn24,Xâu con,Cơ bản,"1,00","41,9%",73
+1,bxo_dn24,Bảng xoắn ốc,Vận dụng linh hoạt,"1,00","44,2%",68
+1,thoigian_hd_bp24,Thời gian,Cơ bản,"1,00","42,7%",80
+1,dschl_hd_bp24,Dãy số chẵn lẻ,Cơ bản,"1,00","32,8%",71
+1,mkwifi_hd_bp24,Mật khẩu Wifi,Nâng cao,"1,00","40,5%",73
+1,rutthe_na_kh24,Rút thẻ,Vận dụng linh hoạt,"1,00","31,3%",40
+1,vongso_na_kh24,Vòng số,Nâng cao,"1,00","44,3%",71
+1,sox2_na_kh24,Số x2,Vận dụng linh hoạt,"1,00","14,9%",28
+1,dtgian_qna24,Đổi thời gian,Cơ bản,"1,00","28,2%",75
+1,hv_qna24,Hình vuông,Nâng cao,"1,00","22,4%",61
+1,tso_qna24,Tách số,Vận dụng linh hoạt,"1,00","28,3%",46
+1,pi_qna24,Số pi gần đúng,Vận dụng linh hoạt,"1,00","38,8%",44
+1,chk_qni24,Chia kẹo,Cơ bản,"1,00","47,9%",123
+1,dayso_qni24,Dãy số,Cơ bản,"1,00","50,9%",113
+1,matkhau_qni24,Mật khẩu,Cơ bản,"1,00","31,6%",86
+1,timbi_qni24,Tìm bi,Vận dụng linh hoạt,"1,00","41,8%",68
+1,chqtinh_qtr24,Chọn que tính,Nâng cao,"1,00","43,5%",75
+1,dso_qtr24,Dãy số,Nâng cao,"1,00","21,8%",67
+1,timkt_qtr24,Tìm kí tự,Nâng cao,"1,00","28,2%",57
+1,dngay_tb24,Đếm ngày,Cơ bản,"1,00","29,6%",126
+1,daythang_tb24,Dãy tháng,Nâng cao,"1,00","35,5%",121
+0,sonam_tb24,Số năm,Vận dụng linh hoạt,"1,00","16,8%",31
+1,timvitri_th24,Tìm vị trí,Vận dụng linh hoạt,"1,00","47,3%",24
+1,timso_vt24,Tìm số,Vận dụng linh hoạt,"1,00","24,7%",45
+1,ss2so,So sánh 2 số,Cơ bản,"1,00","33,5%",76
+1,t2sonn,Tổng 2 số nhỏ nhất,Cơ bản,"1,00","51,5%",33
+1,tong4p5,Tổng 4 số nhỏ nhất,Cơ bản,"1,00","76,7%",46
+1,maxmin,"Số lớn nhất, bé nhất",Cơ bản,"1,00","50,0%",54
+1,dh_kv24,Đồng hồ,Nâng cao,"1,00","26,4%",34
+1,thangmay,Thang máy,Cơ bản,"1,00","26,9%",22
+1,trchso,Trò chơi với những con số,Cơ bản,"1,00","43,5%",26
+1,xepgach,Xếp gạch,Nâng cao,"1,00","25,4%",9
+1,nhngoinha,Những ngôi nhà có ánh nắng,Vận dụng linh hoạt,"1,00","29,9%",25
+1,xephcn,Xếp hình chữ nhật,Nâng cao,"1,00","42,9%",12
+1,tiads,Tỉa dãy số,Cơ bản,"1,00","52,9%",32
+1,dotuoi,Độ tuổi,Cơ bản,"1,00","51,4%",47
+0,chiectat,Những chiếc tất,Cơ bản,"1,00","42,9%",9
+1,botoc,Bộ tộc,Nâng cao,"1,00","27,9%",10
+1,taxi,Taxi,Vận dụng linh hoạt,"1,00","17,4%",6
+1,xoaday,Xóa dãy,Vận dụng linh hoạt,"1,00","55,9%",17
+1,capdoi,Đi tìm cặp đôi,Cơ bản,"1,00","53,5%",20
+1,tinhbao,Tin tình báo,Nâng cao,"1,00","46,2%",5
+1,dietcodai,Diệt cỏ dại,Cơ bản,"1,00","52,1%",29
+1,chldiemso,Chênh lệch điểm số,Nâng cao,"1,00","48,4%",14
+0,canchi,Thiên can địa chi,Cơ bản,"1,00","52,5%",21
+1,sole,Số lẻ,Cơ bản,"1,00","32,8%",38
+1,tongkpt,Tổng k số cuối,Cơ bản,"1,00","49,5%",44
+1,tbcsochan,Trung bình cộng số chẵn,Cơ bản,"1,00","36,1%",37
+1,dchanle,Dãy chẵn lẻ,Cơ bản,"1,00","56,5%",25
+1,hinhphat,Hình phạt,Cơ bản,"1,00","79,6%",29
+0,ngaylecb,Ngày lễ công bằng,Cơ bản,"1,00","73,5%",44
+0,mecung,Mê cung,Vận dụng linh hoạt,"1,00","13,3%",2
+1,giayin,Giấy in,Cơ bản,"1,00","71,3%",75
+1,chogao,Chở gạo,Cơ bản,"1,00","68,9%",39
+1,chiatao,Chia táo,Cơ bản,"1,00","53,2%",54
+1,thomay,Thợ may,Cơ bản,"1,00","87,3%",49
+0,mauchu_tk22,Màu chữ,Cơ bản,"1,00","35,2%",44
+1,tong3k_tk22,Tổng 3K,Cơ bản,"1,00","67,3%",65
+0,sxep_dn23,Sắp xếp,Cơ bản,"1,00","28,2%",62
+0,chienca,Chiên cá,Cơ bản,"1,00","20,6%",19
+1,sxmanhinh,Sản xuất màn hình,Cơ bản,"1,00","37,1%",12
+1,nguoimay,Người máy,Cơ bản,"1,00","50,0%",39
+1,mb_sk24,Mua bóng,Cơ bản,"1,00","51,7%",99
+1,chia5,Chia 5,Cơ bản,"1,00","56,3%",74
+1,xoaso_na21,Xóa số,Nâng cao,"1,00","34,8%",24
+1,chiahet_hn_sk24,Chia hết,Nâng cao,"1,00","21,0%",70
+1,thumay_th24,Thứ mấy?,Cơ bản,"1,00","32,6%",39
+1,capso,Cặp số,Nâng cao,"1,00","60,3%",23
+1,chiabanh,Chia banh,Cơ bản,"1,00","46,9%",21
+1,doigiay,Đôi giày,Cơ bản,"1,00","49,4%",35
+1,hangrao,Hàng rào,Cơ bản,"1,00","83,8%",102
+1,ghephinh,Ghép hình,Nâng cao,"1,00","59,3%",12
+1,trcay,Trồng cây ăn quả,Cơ bản,"1,00","51,1%",22
+1,xepdomino,Xếp domino,Cơ bản,"1,00","76,7%",39
+1,sanbong,Sân bóng,Cơ bản,"1,00","36,8%",15
+1,trchoiqs,Trò chơi quân sự,Nâng cao,"1,00","28,3%",10
+1,hoichoxuan,Hội chợ xuân,Cơ bản,"1,00","57,6%",45
+1,butchi,Mua bút chì,Cơ bản,"1,00","19,9%",92
+1,stkm,Siêu thị khuyến mãi,Cơ bản,"1,00","13,4%",12
+0,chiphi,Chi phí,Nâng cao,"1,00","33,3%",12
+1,muakem,Mua kem,Cơ bản,"1,00","18,1%",12
+1,kmsua,Khuyến mại sữa,Nâng cao,"1,00","41,0%",20
+1,cauthang,Cầu thang,Cơ bản,"1,00","32,7%",32
+1,scl,Sô-cô-la,Nâng cao,"1,00","23,1%",18
+1,tongket,Tổng kết,Cơ bản,"1,00","43,8%",7
+0,mungtuoi,Mừng tuổi,Cơ bản,"1,00","27,3%",19
+0,hcn,Hình chữ nhật,Cơ bản,"1,00","38,2%",12
+1,ghetso3,Ghét số 3,Cơ bản,"1,00","53,6%",41
+1,lohong,Lỗ hổng,Cơ bản,"1,00","71,0%",21
+1,quantri,Quản trị người dùng,Cơ bản,"1,00","48,1%",10
+0,banhangol,Bán hàng online,Nâng cao,"1,00","48,5%",14
+1,chiaphong,Chia phòng,Nâng cao,"1,00","19,3%",13
+1,dso1,Dãy số lẻ,Cơ bản,"1,00","63,4%",69
+1,dso2,Tổng từ 1 đến N,Cơ bản,"1,00","46,5%",128
+1,dso3,Dãy chia hết cho 4,Cơ bản,"1,00","37,8%",28
+1,dayso_bn23,Dãy số,Cơ bản,"1,00","47,3%",41
+1,dayso8,Kiểm tra số trong dãy,Cơ bản,"1,00","58,8%",44
+1,dayso9,Dãy chia hết cho 3,Cơ bản,"1,00","54,7%",50
+1,dayso10,Dãy chia hết cho 5,Cơ bản,"1,00","47,2%",42
+1,dayso11,Dãy từ a đến b,Cơ bản,"1,00","57,3%",60
+1,sokdautien,Số k đầu tiên,Cơ bản,"1,00","46,6%",24
+1,trchoidabong,Trò chơi đá bóng,Vận dụng linh hoạt,"1,00","27,6%",23
+1,stamgiac,Diện tích tam giác,Vận dụng linh hoạt,"1,00","55,6%",15
+1,ntsinhdoi,Số nguyên tố sinh đôi,Cơ bản,"1,00","15,4%",13
+1,tonguoc,Tổng ước số,Cơ bản,"1,00","42,0%",25
+1,doigio,Đổi giờ,Cơ bản,"1,00","44,6%",22
+1,sdt,Số điện thoại,Cơ bản,"1,00","40,5%",15
+1,tinhtong,Tính tổng,Cơ bản,"1,00","15,0%",8
+1,xdxung,Xâu đối xứng,Cơ bản,"1,00","79,7%",46
+1,mahoa,Mã hóa,Cơ bản,"1,00","89,7%",33
+1,teptin,Tệp tin bài nộp,Cơ bản,"1,00","40,4%",37
+1,t3so,Tổng 3 số,Cơ bản,"1,00","35,0%",56
+1,pstoigian,Phân số tối giản,Cơ bản,"1,00","35,9%",20
+1,somayman,Số may mắn,Cơ bản,"1,00","35,5%",32
+1,msthuong,Mã số thưởng,Cơ bản,"1,00","76,1%",47
+1,choicovua,Chơi cờ vua,Cơ bản,"1,00","47,7%",50
+1,xaunhiphan,Xâu nhị phân,Cơ bản,"1,00","35,4%",25
+1,bden,Bóng đèn,Nâng cao,"1,00","71,8%",24
+1,xauloi,Xâu lỗi,Nâng cao,"1,00","39,2%",20
+1,mahoamk,Mã hóa mật khẩu,Cơ bản,"1,00","67,6%",22
+1,mmceasar,Mật mã Ceasar,Nâng cao,"1,00","47,1%",23
+1,tinhdiemso,Tính điểm số,Vận dụng linh hoạt,"1,00","37,2%",13
+1,xgiongnhau2,Xâu giống nhau 2,Vận dụng linh hoạt,"1,00","46,2%",11
+1,xgiongnhau3,Xâu giống nhau 3,Vận dụng linh hoạt,"1,00","17,8%",6
+1,tboiso,Tổng bội số,Cơ bản,"1,00","40,7%",21
+1,tschan,Tổng số chẵn,Nâng cao,"1,00","56,0%",69
+1,tschan2,Tổng số chẵn 2,Nâng cao,"1,00","38,6%",32
+1,tgbi,Tam giác bi,Cơ bản,"1,00","72,9%",38
+1,timbo,Tìm bò lạc,Cơ bản,"1,00","63,9%",40
+1,muaco,Mua cỏ,Nâng cao,"1,00","76,2%",17
+1,sonha,Số nhà,Cơ bản,"1,00","63,6%",32
+0,vehv_mb22,Vẽ hình vuông,Cơ bản,"1,00","46,0%",40
+1,daytbc,Dãy trung bình cộng,Vận dụng linh hoạt,"1,00","68,6%",23
+1,cvtamgiac,Chu vi tam giác,Vận dụng linh hoạt,"1,00","57,6%",33
+1,thaptrcay,Tháp trái cây,Vận dụng linh hoạt,"1,00","55,8%",23
+0,ovuong_dn23,Ô vuông,Vận dụng linh hoạt,"1,00","70,4%",62
+1,tvtle,Tổng vị trí lẻ,Nâng cao,"1,00","56,9%",29
+-1,tdso,Tổng dãy số,Cơ bản,"1,00","30,3%",22
+0,tomau_ict24,Tô màu,Vận dụng linh hoạt,"1,00","32,7%",23
+1,demso1,Đếm số 1,Vận dụng linh hoạt,"1,00","24,5%",30
+1,demso2,Đếm số 2,Vận dụng linh hoạt,"1,00","32,6%",27
+1,demso3,Đếm số 3,Vận dụng linh hoạt,"1,00","35,9%",32
+-1,demso4,Đếm số 4,Vận dụng linh hoạt,"1,00","29,6%",16
+1,tcachdeu,Tổng cách đều,Vận dụng linh hoạt,"1,00","55,6%",4
+1,ds3,Dãy số 3,Cơ bản,"1,00","27,6%",19
+1,sthn5,Số thứ N,Cơ bản,"1,00","33,8%",22
+1,bongtuyet,Bông tuyết,Vận dụng linh hoạt,"1,00","76,8%",30
+1,xoaso2,Xóa số,Vận dụng linh hoạt,"1,00","69,2%",7
+1,ds15,Dãy chẵn từ a đến b,Cơ bản,"1,00","45,6%",31
+0,hvtn,Hình vẽ thứ N,Cơ bản,"1,00","23,5%",19
+1,xkt_qn23,Xâu kí tự,Cơ bản,"1,00","14,7%",10
+1,robot,Robot,Nâng cao,"1,00","36,7%",11
+1,robotdc,Robot đồ chơi,Cơ bản,"1,00","72,4%",18
+-1,dngoacdung,Dãy ngoặc đúng,Vận dụng linh hoạt,"1,00","29,6%",8
+1,xchan,Xâu chẵn,Cơ bản,"1,00","32,3%",18
+1,tenthuoc,Ghép tên thuốc,Vận dụng linh hoạt,"1,00","60,8%",27
+0,kbb2,Kéo búa bao 2,Vận dụng linh hoạt,"1,00","23,2%",12
+1,kbb1,Kéo búa bao 1,Cơ bản,"1,00","73,6%",35
+1,rbdc,Robot di chuyển,Cơ bản,"1,00","38,5%",14
+0,xoakt,Xóa ký tự,Cơ bản,"1,00","71,4%",8
+0,tmtg_hn_sk24,Tô màu tam giác,Nâng cao,"1,00","22,6%",88
+1,f_hn_sk24,Tổng dãy Fibonacci 2,Nâng cao,"1,00","22,0%",62
+1,xqd_sk24,Xếp que diêm,Nâng cao,"1,00","41,5%",59
+0,tmchc_sk24,Tô màu chữ cái,Nâng cao,"1,00","76,7%",23
+1,sthn_kv24,Số thứ N,Cơ bản,"1,00","47,6%",95
+1,dom_kv24,Đếm ô màu,Vận dụng linh hoạt,"1,00","36,6%",72
+0,trch_kv24,Trò chơi,Nâng cao,"1,00","9,8%",36
+1,sdb_kv24,Số đặc biệt,Vận dụng linh hoạt,"1,00","20,0%",34
+1,xdh_sk24,Xem đồng hồ,Nâng cao,"1,00","58,7%",46
+1,trch_qg24,Trò chơi PinBall,Vận dụng linh hoạt,"1,00","16,2%",34
+0,xqd_qg24,Xếp que diêm,Vận dụng linh hoạt,"1,00","27,6%",20
+1,vtg_qg24,Vòng tam giác,Nâng cao,"1,00","33,6%",27
+1,bdso_qg24,Biến đổi số,Vận dụng linh hoạt,"1,00","13,9%",19
+1,chvth,Chó và thỏ,Vận dụng linh hoạt,"1,00","61,4%",21
+1,ds,Dãy số,Nâng cao,"1,00","26,7%",7
+1,trchxd,Trò chơi xếp diêm,Cơ bản,"1,00","22,2%",7
+1,slnh,Số lớn nhất,Nâng cao,"1,00","27,4%",19
+1,tds2,Tổng dãy số,Cơ bản,"1,00","58,8%",46
+1,nvdsm,Những viên đá sắc màu,Cơ bản,"1,00","63,2%",10
+1,tvtle2,Tổng vị trí lẻ,Cơ bản,"1,00","56,7%",38
+1,ch3d2,Chia 3 dư 2,Cơ bản,"1,00","49,3%",18
+1,tnso2,Tổng N số,Nâng cao,"1,00","16,0%",15
+0,tgitrbt,Tính giá trị biểu thức,Nâng cao,"1,00","72,0%",29
+1,mch,Mua chuối,Cơ bản,"1,00","75,0%",9
+1,tle,Tổng lẻ từ a-b,Cơ bản,"1,00","31,7%",37
+1,cs0tc2d,Chữ số 0 cuối cùng (bản dễ),Vận dụng linh hoạt,"1,00","30,2%",13
+1,sbian,Số bí ẩn,Cơ bản,"1,00","25,3%",27
+0,kttt,Ký tự tiếp theo,Cơ bản,"1,00","69,9%",26
+1,vngh,Văn nghệ,Cơ bản,"1,00","40,0%",10
+1,cslop,Cán sự lớp,Cơ bản,"1,00","59,0%",31
+0,sbt,Số bằng tổng,Cơ bản,"1,00","45,8%",11
+0,dso20,Kiểm tra số trong dãy,Cơ bản,"1,00","15,6%",15
+1,sothun,Số thứ N,Cơ bản,"1,00","47,3%",59
+1,catchu,Cắt chữ vi tính,Nâng cao,"1,00","64,4%",24
+1,ghtg,Ghép tam giác,Nâng cao,"1,00","53,8%",7
+1,fibo,Dãy Fibonacci,Cơ bản,"1,00","35,6%",17
+1,kclt,Dãy có khoảng cách liên tiếp,Cơ bản,"1,00","38,2%",19
+1,tds5,Tổng dãy số,Cơ bản,"1,00","26,3%",19
+1,tnso,Tổng N số,Cơ bản,"1,00","57,3%",39
+1,tribonacci,Dãy Tribonacci,Cơ bản,"1,00","55,2%",40
+1,tgsfloyd,Tam giác số Floyd,Cơ bản,"1,00","28,8%",23
+0,bthang_tn22,Bậc thang,Nâng cao,"1,00","40,0%",14
+1,mtrxo_btl25,Ma trận xoắn ốc,Vận dụng linh hoạt,"1,00","44,0%",81
+1,dso21,Dãy số,Nâng cao,"1,00","15,2%",7
+0,tgsdx,Tam giác số đối xứng,Nâng cao,"1,00","43,0%",23
+1,tvt,Tàu vũ trụ,Cơ bản,"1,00","44,2%",19
+0,ktso,Kiểm tra số trong dãy,Cơ bản,"1,00","20,8%",5
+1,tsh_na21tt,Tổng số hạng,Cơ bản,"1,00","37,8%",13
+1,cthong,Cây thông,Nâng cao,"1,00","79,1%",20
+0,dse,Dãy số E,Cơ bản,"1,00","38,1%",13
+1,ds22,Dãy số,Cơ bản,"1,00","73,7%",12
+1,demhv_ttna22,Đếm hình vuông,Nâng cao,"1,00","90,6%",33
+1,dkitu,Dãy ký tự,Nâng cao,"1,00","43,5%",29
+1,shuuti,Số hữu tỉ,Vận dụng linh hoạt,"1,00","31,3%",5
+1,phtthn,Phần tử thứ N,Nâng cao,"1,00","40,5%",14
+1,tnpht,Tổng N phần tử,Cơ bản,"1,00","36,4%",15
+1,tso,Tìm số,Cơ bản,"1,00","22,2%",9
+1,kcle,Dãy có khoảng cách lẻ tăng dần,Cơ bản,"1,00","26,6%",21
+1,tbph,Tổng bình phương,Nâng cao,"1,00","38,3%",42
+1,tdscd,Tổng dãy số cách đều,Nâng cao,"1,00","36,1%",24
+1,tdf,Tổng dãy Fibonacci,Nâng cao,"1,00","29,9%",40
+1,dsa_ttkv23,Dãy số A,Vận dụng linh hoạt,"1,00","32,3%",10
+1,tds6,Tổng dãy số,Nâng cao,"1,00","58,3%",12
+0,thnghs,Thử nghiệm súng,Vận dụng linh hoạt,"1,00","16,0%",11
+1,daylipon,Dãy Lipon,Nâng cao,"1,00","21,7%",5
+1,skd,Số kì diệu,Nâng cao,"1,00","28,9%",21
+1,dsoamc,Dãy số AMC,Nâng cao,"1,00","20,6%",19
+1,dsf,Dãy số F,Vận dụng linh hoạt,"1,00","36,7%",10
+1,bdck,Biến đổi,Vận dụng linh hoạt,"1,00","28,9%",12
+1,dscong,Dãy số cộng,Vận dụng linh hoạt,"1,00","23,3%",7
+1,cmcc,Cá mập cắn cáp,Vận dụng linh hoạt,"1,00","23,2%",62
+1,tstrd_bd23,Tìm số trong dãy,Nâng cao,"1,00","29,3%",19
+1,timso_ld22,Tìm số,Nâng cao,"1,00","16,3%",11
+1,dsch,Đếm số chẵn,Vận dụng linh hoạt,"1,00","49,0%",20
+1,xepbi,Xếp bi,Nâng cao,"1,00","15,2%",98
+1,dsl2,Dãy số lặp 2,Cơ bản,"1,00","49,0%",42
+1,dsl3,Dãy số lặp 3,Cơ bản,"1,00","50,6%",32
+1,bthctr,Biểu thức cộng trừ,Cơ bản,"1,00","84,1%",57
+1,evenland,Even Land,Vận dụng linh hoạt,"1,00","25,4%",10
+1,dstr,Đánh số trang sách 1,Cơ bản,"1,00","53,5%",31
+1,dstr2,Đánh số trang sách 2,Nâng cao,"1,00","52,8%",17
+1,schs,Số chữ số,Nâng cao,"1,00","61,5%",21
+0,dstr3,Đánh số trang sách 3,Nâng cao,"1,00","28,4%",15
+1,csthn,Chữ số thứ N,Nâng cao,"1,00","17,0%",8
+1,ssieule_ict24,Số siêu lẻ,Nâng cao,"10,00","32,8%",45
+1,tcsch,Tổng chữ số là số chẵn,Nâng cao,"1,00","26,9%",18
+1,khphmk,Khôi phục mật khẩu,Nâng cao,"1,00","31,4%",15
+1,fibod,Dãy số Fibonacci,Cơ bản,"1,00","52,5%",57
+1,kcle_d,Dãy có khoảng cách lẻ tăng dần (bản dễ),Cơ bản,"1,00","73,6%",30
+1,kclt_d,Dãy có khoảng cách liên tiếp (bản dễ),Cơ bản,"1,00","64,3%",25
+1,xkt,Xóa ký tự,Vận dụng linh hoạt,"1,00","38,7%",18
+1,stchh,Số tự chia hết,Nâng cao,"1,00","54,5%",11
+0,xdx,Xâu đối xứng,Nâng cao,"1,00","66,7%",7
+1,dsck,Dãy số theo chu kỳ,Nâng cao,"1,00","35,0%",50
+1,timk,Tìm k,Nâng cao,"1,00","33,3%",24
+1,sthn2,Số thứ N,Cơ bản,"1,00","56,5%",36
+1,sthn3,Số thứ N của dãy,Cơ bản,"1,00","28,3%",17
+1,timx,Tìm x,Nâng cao,"1,00","11,8%",6
+0,bdso2,Biến đổi số,Nâng cao,"1,00","60,5%",24
+0,boi45,Bội của 45,Nâng cao,"1,00","37,9%",15
+0,solnh,Số lớn nhất,Nâng cao,"1,00","21,2%",5
+0,sdxtron,Số đối xứng tròn,Nâng cao,"1,00","16,7%",5
+1,sslcb,Số Siêu lẻ Cân bằng,Nâng cao,"1,00","23,5%",7
+0,stron,Số tròn,Nâng cao,"1,00","19,7%",48
+1,chkhs,Chuỗi khóa số,Nâng cao,"1,00","37,0%",15
+-1,ghsdx,Ghép số đối xứng,Nâng cao,"1,00","24,1%",5
+0,sgmm,Số gần may mắn,Nâng cao,"1,00","28,7%",17
+1,schphdx,Số chính phương đối xứng,Nâng cao,"1,00","67,9%",8
+1,sthn4,Số thứ N,Vận dụng linh hoạt,"1,00","42,9%",19
+-1,bsx18,Biển số xe 18,Nâng cao,"1,00","18,9%",19
+0,chiahet2,Chia hết,Cơ bản,"1,00","15,3%",12
+1,xoanocso,Xoắn ốc số,Vận dụng linh hoạt,"1,00","35,0%",12
+0,dkt,Dãy kí tự,Nâng cao,"1,00","33,8%",17
+1,dscm,Dãy số CM,Nâng cao,"1,00","39,2%",17
+1,dsba,Dãy số bí ẩn,Nâng cao,"1,00","22,8%",25
+1,xcddc,Xâu có độ dài chẵn,Cơ bản,"1,00","50,0%",30
+1,sdn,Số duyên nợ,Cơ bản,"1,00","44,7%",48
+1,ts,Tìm số,Cơ bản,"1,00","61,5%",22
+1,5ktcc,5 kí tự cuối cùng,Cơ bản,"1,00","54,3%",47
+1,dcs,Đếm chữ số,Cơ bản,"1,00","67,1%",43
+1,dcc,Đếm chữ cái,Cơ bản,"1,00","60,3%",38
+1,nenxau,Nén xâu,Cơ bản,"1,00","59,5%",18
+1,xktginh,Xóa ký tự giống nhau,Cơ bản,"1,00","49,1%",25
+1,xktlkginh,Xóa ký tự liền kề giống nhau,Cơ bản,"1,00","68,4%",13
+1,hphat,Hình phạt,Cơ bản,"1,00","52,0%",26
+0,boi45_2,Bội của 45 (2),Nâng cao,"1,00","24,7%",16
+1,dstr4,Đánh số trang sách 4,Nâng cao,"1,00","33,3%",11
+1,tlmax,Tích lẻ lớn nhất,Vận dụng linh hoạt,"1,00","42,7%",22
+1,kchiahet,Không chia hết,Vận dụng linh hoạt,"1,00","45,2%",25
+1,chhvskchh,Chia hết và không chia hết,Cơ bản,"1,00","44,1%",22
+1,chh30,Chia hết cho 30,Nâng cao,"1,00","15,2%",11
+-1,dsd1,Dãy số D (bản dễ),Vận dụng linh hoạt,"1,00","30,6%",19
+1,oddsum,Odd sum,Vận dụng linh hoạt,"1,00","25,0%",19
+0,schmin,Số chẵn nhỏ nhất,Nâng cao,"1,00","18,9%",20
+0,chh3,Chia hết cho 3,Nâng cao,"1,00","51,0%",21
+-1,chh6,Chia hết cho 6,Nâng cao,"1,00","38,2%",15
+1,songuon2,Số nguồn 2,Vận dụng linh hoạt,"1,00","24,0%",22
+1,chdthd,Chọn đội thi đấu,Cơ bản,"1,00","42,2%",16
+1,cs0tc2k,Chữ số 0 cuối cùng (bản khó),Vận dụng linh hoạt,"1,00","26,3%",11
+1,hatde,Nhặt hạt dẻ,Cơ bản,"1,00","30,0%",18
+1,sln5,Số lớn nhất chia hết cho 5,Vận dụng linh hoạt,"1,00","25,6%",19
+1,sln4,Số lớn nhất chia hết cho 4,Vận dụng linh hoạt,"1,00","29,3%",22
+1,snn10,Số nhỏ nhất chia hết cho 10,Vận dụng linh hoạt,"1,00","29,4%",13
+1,sln2,Số lớn nhất chia hết cho 2,Vận dụng linh hoạt,"1,00","28,8%",12
+1,sthn6,Số thứ N,Nâng cao,"1,00","31,3%",22
+1,lambt2,Làm bài tập,Nâng cao,"1,00","55,3%",18
+1,ds01,Dãy số 0-1,Nâng cao,"1,00","18,0%",24
+1,dsthnh,Dãy số theo nhóm,Nâng cao,"1,00","61,9%",22
+1,moonwalk,Vũ điệu Mặt trăng,Nâng cao,"1,00","15,5%",6
+1,rbthl_dn_tk25,Robot thất lạc,Cơ bản,"1,00","40,8%",94
+1,ankhe_thk25,Ăn khế trả vàng,Cơ bản,"1,00","20,0%",59
+1,demkt_thk25,Đếm ký tự,Nâng cao,"1,00","40,0%",58
+1,phchh_dn_nghs25,Phép chia hết,Cơ bản,"1,00","30,2%",160
+1,tvtr_nghs25,Tìm vị trí,Nâng cao,"1,00","48,6%",152
+0,thvt,Tín hiệu từ vũ trụ,Cơ bản,"1,00","11,5%",66
+1,ds_nghs25,Dãy số,Nâng cao,"1,00","44,7%",131
+1,saban_lc25,Sa bàn,Cơ bản,"1,00","50,6%",188
+1,nchd_lc25,Nét chạm mặt đất,Cơ bản,"1,00","62,6%",177
+1,tongds_lc25,Tổng dãy số,Cơ bản,"1,00","26,4%",130
+0,dss3,Dãy số S,Nâng cao,"10,00","5,3%",25
+0,mvo,Mua vở,Vận dụng linh hoạt,"1,00","6,4%",49
+1,tachso,Tách số,Cơ bản,"1,00","18,2%",169
+1,3hk,Ba hộp kẹo,Cơ bản,"1,00","66,1%",62
+1,bee,Tổ ong,Nâng cao,"1,00","42,6%",7
+0,dcnt,Đôi cánh nữ thần,Vận dụng linh hoạt,"1,00","19,8%",70
+1,dt_str25,Diện tích,Cơ bản,"1,00","61,1%",209
+1,trs_str25,Trang sách,Cơ bản,"1,00","35,6%",137
+1,haitao_str25,Hái táo,Vận dụng linh hoạt,"1,00","22,4%",69
+0,stron_str25,Số tròn,Vận dụng linh hoạt,"1,00","15,4%",34
+1,chv_hn_ntl25,Chu vi,Cơ bản,"1,00","61,5%",288
+1,tln_hn_ntl25,Tích lớn nhất,Cơ bản,"1,00","46,2%",148
+1,ds_hn_ntl25,Dãy số,Cơ bản,"1,00","41,8%",150
+1,dt_hn_ntl25,Đoạn thẳng,Cơ bản,"1,00","31,1%",107
+1,tlt_bdi24,Tổng liên tiếp,Vận dụng linh hoạt,"1,00","44,8%",10
+1,ds_na_dl22,Dãy số,Cơ bản,"1,00","42,1%",31
+1,ds_hoalu25,Dãy số,Cơ bản,"1,00","29,1%",15
+1,dhang_qn_dtr25,Đơn hàng,Cơ bản,"1,00","56,2%",184
+1,dcho_qn_dtr25,Đổi chỗ,Cơ bản,"1,00","42,7%",112
+1,chlech_qn_dtr25,Chênh lệch,Cơ bản,"1,00","54,0%",125
+1,ghcap_qn_dtr25,Ghép cặp,Cơ bản,"1,00","55,4%",95
+1,ts_hv25,Tặng sữa,Cơ bản,"1,00","44,9%",149
+1,dph_hv25,Đồng phục,Cơ bản,"1,00","61,6%",138
+1,tv_hv25,Từ vựng,Nâng cao,"1,00","10,3%",47
+1,xcs,Xóa chữ số,Vận dụng linh hoạt,"1,00","56,8%",24
+1,trc_sk1_25,Trồng cây,Cơ bản,"1,00","65,9%",267
+1,mb_sk1_25,Tô màu bóng,Cơ bản,"1,00","30,3%",179
+1,tmbc_sk1_25,Tô màu bàn cờ,Cơ bản,"1,00","34,5%",159
+1,tds_sk1_25,Tổng dãy số,Nâng cao,"1,00","24,4%",157
+1,mm_sk1_25,Mật mã,Nâng cao,"1,00","47,6%",117
+1,xcab,Xâu con a-b,Cơ bản,"1,00","56,8%",25
+1,xxcab,Xóa xâu con a-b,Cơ bản,"1,00","76,9%",39
+1,xcdn,Xâu con dài nhất,Cơ bản,"1,00","70,6%",12
+1,tgx,Tam giác xâu,Nâng cao,"1,00","15,1%",8
+1,xh_nt25,Xếp hàng,Cơ bản,"1,00","40,8%",172
+1,tgivh_nt25,Thời gian vận hành,Cơ bản,"1,00","48,4%",142
+1,ch5_nt25,Chia hết cho 5,Nâng cao,"1,00","9,6%",37
+1,dch_nt25,Đường chéo,Nâng cao,"1,00","26,5%",67
+1,phnh_nt25,Phép nhân,Nâng cao,"1,00","48,8%",97
+1,tt_btl25,Tính tổng,Cơ bản,"1,00","66,9%",130
+1,kt_btl25,Ký tự,Cơ bản,"1,00","33,5%",60
+0,bhv,Bảng hình vuông,Nâng cao,"1,00","32,9%",21
+1,bhv2,Bảng hình vuông 2,Nâng cao,"1,00","46,7%",15
+-1,xoanocso2,Xoắn ốc số 2,Vận dụng linh hoạt,"1,00","30,4%",7
+-1,tmau,Tô màu,Vận dụng linh hoạt,"1,00","44,4%",8
+-1,vhv1,Vòng hình vuông 1,Nâng cao,"1,00","20,5%",7
+-1,lov1,Lưới ô vuông 1,Nâng cao,"1,00","36,0%",9
+-1,lov3,Lưới ô vuông 3,Nâng cao,"1,00","25,8%",10
+-1,vhv2,Vòng hình vuông 2,Nâng cao,"1,00","23,8%",15
+0,lov2,Lưới ô vuông 2,Nâng cao,"1,00","13,3%",6
+-1,dovui_hc25,Đố vui,Nâng cao,"1,00","24,0%",40
+-1,tdt_hc25,Tính diện tích,Nâng cao,"1,00","23,5%",80
+-1,km_hc25,Khuyến mãi,Cơ bản,"1,00","34,3%",103
+-1,itnhat_hc25,Ít nhất,Nâng cao,"1,00","34,7%",52
+-1,chlt_dn23,Chuỗi liên tục,Nâng cao,"1,00","50,8%",23
+1,hcn_bg25,Hình chữ nhật,Cơ bản,"1,00","71,6%",279
+1,chbo_bg25,Chạy bộ,Cơ bản,"1,00","73,4%",214
+1,tng_bg25,Tính ngày,Cơ bản,"1,00","27,1%",183

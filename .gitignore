@@ -229,3 +229,11 @@ Temporary Items
 data/
 submission/
 problems_data.csv
+
+chrome_profile/
+submissions_codemath/
+submissions_codemath_refactored/
+submissions_codemath_renamed/
+submissions_codemath_refactored_renamed/
+explanations/
+explanations_backup/

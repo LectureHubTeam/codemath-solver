@@ -1,5 +1,5 @@
 [flake8]
-exclude = .git,data,submission,conf/settings.py
+exclude = .git,data,submission,conf/settings.py,conf/prompt.py
 max-line-length = 127
 select = E,F,W,C
 ignore=W503,E203

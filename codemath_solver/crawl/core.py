@@ -103,7 +103,7 @@ class CodeMathCrawler:
 
     def crawl_all_pages(self):
         all_problems = []
-        for page in range(self.start_page, self.end_page):
+        for page in range(self.start_page, self.end_page + 1):
             url = self.problem_page_url.format(page=page)
             page_data = self.crawl_problem_list(url)
             all_problems.extend(page_data)

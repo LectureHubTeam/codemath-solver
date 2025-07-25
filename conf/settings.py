@@ -20,7 +20,7 @@ CRAWLER = {
     "problem_page_url": "https://laptrinh.codemath.vn/problems/?page={page}",
     "config": {
         "start_page": 1,
-        "end_page": 13,
+        "end_page": 14,
         "delay": 0.75,
     },
 }

@@ -16,3 +16,4 @@ pre-commit
 rich
 pytest
 pytest-cov
+alive-progress

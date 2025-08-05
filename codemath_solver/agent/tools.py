@@ -1,6 +1,8 @@
+import platform
 import time
 
 import pyautogui
+import pyperclip
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -15,12 +17,47 @@ from codemath_solver.utils.process_file import clear_data
 class CodeMathAgent:
     def __init__(self):
         self.solver = GeminiSolver()
+        self.driver = None
+        self.setup_driver()
+
+    def setup_driver(self):
+        """Setup Chrome driver with fixed profile and download options"""
+        from pathlib import Path
+
         options = webdriver.ChromeOptions()
-        options.add_argument("--start-maximized")
-        options.debugger_address = "localhost:9222"
-        self.driver = webdriver.Chrome(
-            service=Service(ChromeDriverManager().install()), options=options
-        )
+        # Specify a fixed user profile directory
+        project_root = Path(__file__).parent.parent.parent
+        profile_dir = str(project_root / "chrome_profile")
+        print(f"🔹 Profile directory: {profile_dir}")
+        options.add_argument(f"--user-data-dir={profile_dir}")
+        options.add_argument("--profile-directory=Default")
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option("useAutomationExtension", False)
+
+        # Set download directory and PDF handling
+        download_dir = str(project_root / "data")
+        prefs = {
+            "download.default_directory": download_dir,
+            "download.prompt_for_download": False,
+            "download.directory_upgrade": True,
+            "safebrowsing.enabled": True,
+            "plugins.always_open_pdf_externally": True,  # Force download PDFs instead of opening
+        }
+        options.add_experimental_option("prefs", prefs)
+
+        try:
+            self.driver = webdriver.Chrome(
+                service=Service(ChromeDriverManager().install()), options=options
+            )
+            # Remove webdriver property
+            self.driver.execute_script(
+                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+            )
+            print("✅ Browser driver created successfully with fixed profile")
+        except Exception as e:
+            print(f"❌ Error creating browser driver: {str(e)}")
+            raise
 
     def click_button(self, path: str, by_type: str = "id", wait_time: int = 10):
         if by_type == "id":
@@ -37,13 +74,28 @@ class CodeMathAgent:
         except Exception as e:
             print(f"❌ Button not found: {e}")
 
+    def type_via_clipboard(self, text: str):
+        """Type text using clipboard to avoid keyboard layout issues"""
+        pyperclip.copy(text)
+        time.sleep(0.2)
+        print(pyperclip.paste())
+
+        system = platform.system()
+        if system == "Darwin":  # macOS
+            pyautogui.hotkey("command", "v", interval=0.1)
+        elif system == "Windows":
+            pyautogui.hotkey("ctrl", "v", interval=0.1)
+        else:  # Linux
+            pyautogui.hotkey("ctrl", "v", interval=0.1)
+        time.sleep(0.5)
+
     def download_problem(self, file_name: str):
         self.click_button(path="pdf_button", by_type="id")
         time.sleep(3)
         print("📂 Pressing Enter to save PDF...")
         pyautogui.press("enter")
         time.sleep(3)
-        pyautogui.write(file_name, interval=0.25)
+        self.type_via_clipboard(file_name)
         time.sleep(2)
         pyautogui.press("enter")
         time.sleep(2)
@@ -78,8 +130,11 @@ class CodeMathAgent:
                 )
         except Exception as e:
             print(f"❌ Error: {e}")
+            return False
         finally:
-            self.driver.quit()
+            if self.driver:
+                self.driver.quit()
+                self.driver = None
             clear_data("data")
         print("🎯 DONE!")
         return True

@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import streamlit as st
 
-from codemath_solver.agent.tools import CodeMathAgent
 from codemath_solver.crawl.core import CodeMathCrawler
 from codemath_solver.utils.select_problems import get_filtered_problems
 from conf import settings
@@ -13,7 +12,7 @@ class CodeMathSolverApp:
     def __init__(self):
         self.CSV_FILE = settings.CSV_FILE
         self.crawler = CodeMathCrawler()
-        self.agent = CodeMathAgent()
+        self.agent = None  # Initialize agent lazily when needed
         self.init_session_state()
         st.set_page_config(layout=settings.STREAMLIT.get("layout", "wide"))
         st.title(settings.STREAMLIT.get("title", "CodeMath Solver"))
@@ -160,6 +159,11 @@ class CodeMathSolverApp:
         )
         if st.button("Start Processing"):
             with st.spinner("Processing selected problems... This may take a while."):
+                # Initialize agent only when needed for processing
+                if self.agent is None:
+                    from codemath_solver.agent.tools import CodeMathAgent
+
+                    self.agent = CodeMathAgent()
                 if self.agent.process_problems(st.session_state.selected_problems):
                     st.success("Processing script finished.")
                 else:
@@ -169,10 +173,22 @@ class CodeMathSolverApp:
                 st.session_state.selected_problems = []
                 st.rerun()
 
+    def cleanup(self):
+        """Clean up resources when the app is done"""
+        if self.agent and hasattr(self.agent, "driver") and self.agent.driver:
+            try:
+                self.agent.driver.quit()
+                print("🔒 Browser closed during cleanup")
+            except Exception:
+                pass
+
     def run(self):
-        self.crawl_section()
-        self.selection_section()
-        self.processing_section()
+        try:
+            self.crawl_section()
+            self.selection_section()
+            self.processing_section()
+        finally:
+            self.cleanup()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 """
-CodeMath file processing utilities.
+LQDOJ file processing utilities.
 Uses shared utilities from base_solver for common functionality.
 """
 

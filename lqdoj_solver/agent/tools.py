@@ -3,12 +3,8 @@ LQDOJ web automation agent.
 Inherits from BaseAgent to provide LQDOJ-specific functionality.
 """
 
-import os
-import time
-
-from selenium.webdriver.common.by import By
-
 from base_solver.base_agent import BaseAgent
+from conf.agent_settings import LQDOJ_AGENT_CONFIG
 from lqdoj_solver.agent.llm import LQDOJGeminiSolver
 
 
@@ -18,8 +14,16 @@ class LQDOJAgent(BaseAgent):
     Inherits common functionality from BaseAgent.
     """
 
-    def __init__(self, url_base: str = "https://lqdoj.edu.vn", prefix: str = "lqdoj"):
-        super().__init__(url_base=url_base, prefix=prefix)
+    def __init__(self):
+        super().__init__(
+            url_base=LQDOJ_AGENT_CONFIG["url_base"],
+            prefix=LQDOJ_AGENT_CONFIG["prefix"],
+            solved_status_icon=LQDOJ_AGENT_CONFIG["solved_status_icon"],
+            unsolved_status_icon=LQDOJ_AGENT_CONFIG["unsolved_status_icon"],
+            select_file_submit=LQDOJ_AGENT_CONFIG["select_file_submit"],
+            button_submit=LQDOJ_AGENT_CONFIG["button_submit"],
+            problem_title_class=LQDOJ_AGENT_CONFIG["problem_title_class"],
+        )
 
     def create_solver(self):
         """
@@ -29,22 +33,6 @@ class LQDOJAgent(BaseAgent):
             LQDOJ solver instance
         """
         return LQDOJGeminiSolver()
-
-    def submit_problem(self, submission_file: str):
-        """
-        Submit solution file to LQDOJ website.
-
-        Args:
-            submission_file: Path to the solution file
-        """
-        self.driver.get(self.get_submission_url())
-        time.sleep(1)
-
-        file_input = self.driver.find_element(By.ID, "id_source_file")
-        submission_file = os.path.join(self.project_root, submission_file)
-        file_input.send_keys(submission_file)
-        self.click_button(path='//*[@id="submit-button"]', by_type="xpath")
-        time.sleep(3)
 
 
 if __name__ == "__main__":

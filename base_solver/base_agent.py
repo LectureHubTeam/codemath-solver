@@ -19,6 +19,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 from base_solver.base_llm import BaseGeminiSolver
+from database.enums import SolvedStatus
 
 
 class BaseAgent(ABC):
@@ -27,7 +28,16 @@ class BaseAgent(ABC):
     Provides common functionality for browser automation and file operations.
     """
 
-    def __init__(self, url_base: str = None, prefix: str = None):
+    def __init__(
+        self,
+        url_base: str = None,
+        prefix: str = None,
+        solved_status_icon: str = None,
+        unsolved_status_icon: str = None,
+        select_file_submit: str = None,
+        button_submit: str = None,
+        problem_title_class: str = "problem-title",
+    ):
         """Initialize the base agent with solver and driver setup."""
         self.project_root = Path(__file__).parent.parent
         self.solver = self.create_solver()
@@ -36,6 +46,15 @@ class BaseAgent(ABC):
         self.problem_code = None
         self.url_base = url_base
         self.prefix = prefix
+
+        # For checking solved status
+        self.solved_status_icon = solved_status_icon
+        self.unsolved_status_icon = unsolved_status_icon
+        self.problem_title_class = problem_title_class
+
+        # For submitting problem
+        self.select_file_submit = select_file_submit
+        self.button_submit = button_submit
 
     @abstractmethod
     def create_solver(self) -> BaseGeminiSolver:
@@ -181,16 +200,21 @@ class BaseAgent(ABC):
         print(f"✅ File downloaded: {file_downloaded}")
         return file_downloaded
 
-    @abstractmethod
     def submit_problem(self, submission_file: str):
         """
         Submit solution file to the website.
-        Must be implemented by subclasses.
 
         Args:
             submission_file: Path to the solution file
         """
-        pass
+        self.driver.get(self.get_submission_url())
+        time.sleep(1)
+
+        file_input = self.driver.find_element(By.ID, self.select_file_submit)
+        submission_file = os.path.join(self.project_root, submission_file)
+        file_input.send_keys(submission_file)
+        self.click_button(path=self.button_submit, by_type="xpath")
+        time.sleep(3)
 
     def get_problem_url(self) -> str:
         """
@@ -213,10 +237,53 @@ class BaseAgent(ABC):
         """
         return f"{self.url_base}/problem/{self.problem_code}/submit"
 
+    def check_solved_status(self) -> SolvedStatus:
+        """
+        Check the solved status of the problem based on CSS classes in the problem-title element.
+
+        Returns:
+            SolvedStatus: SOLVED if problem is solved, UNSOLVED if attempted but not solved, NOT_SOLVED if not attempted
+        """
+        try:
+            # Navigate to the problem page if not already there
+            if not self.driver.current_url.endswith(self.problem_code):
+                self.driver.get(self.get_problem_url())
+                time.sleep(2)
+
+            # Look for the problem-title element
+            problem_title = self.driver.find_element(
+                By.CLASS_NAME, self.problem_title_class
+            )
+
+            # Check for solved status icon (check-circle)
+            try:
+                problem_title.find_element(By.CSS_SELECTOR, self.solved_status_icon)
+                return SolvedStatus.SOLVED
+            except Exception:
+                pass
+
+            # Check for attempted but not solved status icon (minus-circle)
+            try:
+                problem_title.find_element(By.CSS_SELECTOR, self.unsolved_status_icon)
+                return SolvedStatus.UNSOLVED
+            except Exception:
+                pass
+
+            # If neither icon is found, the problem hasn't been attempted
+            return SolvedStatus.NOT_SOLVED
+
+        except Exception as e:
+            print(f"❌ Error checking solved status: {str(e)}")
+            return SolvedStatus.NOT_SOLVED
+
     def process_problems(self, problems_code: list):
         """Process a list of problem codes"""
         for problem_code in problems_code:
             self.problem_code = problem_code
+            if self.check_solved_status() == SolvedStatus.SOLVED:
+                print(f"✅ Problem `{problem_code}` already solved")
+                continue
+
             print(f"\n🔄 Processing problem: {problem_code}")
             try:
                 # Navigate to problem page

@@ -55,11 +55,26 @@ class ProblemCRUD:
             return None
 
     def get_by_code(self, problem_code: str) -> Optional[Problem]:
-        """Get problem by code"""
+        """Get problem by code (deprecated - use get_by_code_and_platform instead)"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             cursor.execute(
                 "SELECT * FROM problems WHERE problem_code = ?", (problem_code,)
+            )
+            row = cursor.fetchone()
+            if row:
+                return self._row_to_problem(row)
+            return None
+
+    def get_by_code_and_platform(
+        self, problem_code: str, platform: int
+    ) -> Optional[Problem]:
+        """Get problem by code and platform"""
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+            cursor.execute(
+                "SELECT * FROM problems WHERE problem_code = ? AND platform = ?",
+                (problem_code, platform),
             )
             row = cursor.fetchone()
             if row:
@@ -139,7 +154,6 @@ class ProblemCRUD:
 
     def _row_to_problem(self, row) -> Problem:
         """Convert database row to Problem object"""
-        print(row)
         return Problem(
             id=row[0],
             problem_code=row[1],

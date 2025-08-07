@@ -171,7 +171,6 @@ class LQDOJCrawler:
 
     def crawl_all_pages(self):
         all_problems = []
-        self.end_page = 1
         for page in range(self.start_page, self.end_page + 1):
             url = self.problem_page_url.format(page=page)
             page_data = self.crawl_problem_list(url)

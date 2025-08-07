@@ -89,9 +89,9 @@ class DatabaseManager:
             return points
 
         if points.endswith("p"):
-            return int(points.replace("p", ""))
+            return int(float(points.replace("p", "")))
 
-        return int(points.replace(",", ""))
+        return int(float(points.replace(",", "")))
 
     def _get_ac_rate(self, ac_rate: str) -> float:
         """Get ac rate from string"""
@@ -137,11 +137,17 @@ class DatabaseManager:
                 ),
             )
 
-            # Check if problem already exists
-            existing = self.problems.get_by_code(problem.problem_code)
+            # Check if problem already exists (based on problem_code AND platform)
+            existing = self.problems.get_by_code_and_platform(
+                problem.problem_code, problem.platform
+            )
             if not existing:
                 self.problems.create(problem)
                 migrated_count += 1
+            else:
+                print(
+                    f"Skipped duplicate: {problem.problem_code} on platform {problem.platform}"
+                )
 
         return migrated_count
 

@@ -1,8 +1,3 @@
-# database/migrate.py
-"""
-Migration scripts for database
-"""
-
 import os
 
 import pandas as pd

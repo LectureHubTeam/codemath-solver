@@ -15,7 +15,7 @@ INSERT OR IGNORE INTO platforms (name, url) VALUES ('LQDOJ', 'https://lqdoj.edu.
 -- Bảng chính lưu thông tin bài toán
 CREATE TABLE IF NOT EXISTS problems (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    problem_code VARCHAR(50) UNIQUE NOT NULL,           -- Mã bài toán (tt25candy)
+    problem_code VARCHAR(50) NOT NULL,                  -- Mã bài toán (tt25candy)
     problem_name TEXT NOT NULL,                         -- Tên bài toán (Thích kẹo ngọt)
     platform INT NOT NULL,                              -- ID Nền tảng
     problem_url TEXT,                                   -- URL chi tiết bài toán
@@ -31,7 +31,8 @@ CREATE TABLE IF NOT EXISTS problems (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,     -- Thời gian cập nhật cuối
     del_flag BOOLEAN DEFAULT 0,                         -- Trạng thái xóa (0: Chưa xóa, 1: Đã xóa)
     notes TEXT,                                          -- Ghi chú bổ sung
-    FOREIGN KEY (platform) REFERENCES platforms(id) ON DELETE CASCADE
+    FOREIGN KEY (platform) REFERENCES platforms(id) ON DELETE CASCADE,
+    UNIQUE(problem_code, platform)                      -- Unique constraint trên cả problem_code và platform
 );
 
 -- Bảng lưu thông tin submission
@@ -78,6 +79,7 @@ CREATE TABLE IF NOT EXISTS solutions (
 );
 
 -- Indexes để tối ưu performance
+CREATE INDEX IF NOT EXISTS idx_problems_code_platform ON problems(problem_code, platform);
 CREATE INDEX IF NOT EXISTS idx_problems_code ON problems(problem_code);
 CREATE INDEX IF NOT EXISTS idx_problems_category ON problems(category);
 CREATE INDEX IF NOT EXISTS idx_problems_difficulty ON problems(difficulty);

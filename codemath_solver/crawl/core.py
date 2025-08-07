@@ -5,19 +5,23 @@ import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
-from conf import settings
+from conf import codemath_settings
 
 load_dotenv()
 
 
 class CodeMathCrawler:
     def __init__(self):
-        self.cookies = settings.CRAWLER.get("cookies")
-        self.problem_page_url = settings.CRAWLER.get("problem_page_url")
-        self.start_page = settings.CRAWLER.get("config").get("start_page")
-        self.end_page = settings.CRAWLER.get("config").get("end_page")
-        self.delay = settings.CRAWLER.get("config").get("delay")
-        self.csv_file = settings.CSV_FILE
+        self.cookies = codemath_settings.CODEMATH_CRAWLER.get("cookies")
+        self.problem_page_url = codemath_settings.CODEMATH_CRAWLER.get(
+            "problem_page_url"
+        )
+        self.start_page = codemath_settings.CODEMATH_CRAWLER.get("config").get(
+            "start_page"
+        )
+        self.end_page = codemath_settings.CODEMATH_CRAWLER.get("config").get("end_page")
+        self.delay = codemath_settings.CODEMATH_CRAWLER.get("config").get("delay")
+        self.csv_file = codemath_settings.CODEMATH_CSV_FILE
 
     def fetch_page(self, url):
         try:

@@ -226,6 +226,7 @@ Temporary Items
 *.icloud
 
 # Data
+*.db
 data/
 submission/
 problems_data.csv

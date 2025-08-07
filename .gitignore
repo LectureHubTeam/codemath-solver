@@ -232,6 +232,7 @@ submission/
 problems_data.csv
 
 chrome_profile/
+chrome_profile_temp/
 submissions_codemath/
 submissions_codemath_refactored/
 submissions_codemath_renamed/

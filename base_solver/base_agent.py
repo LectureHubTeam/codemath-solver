@@ -5,9 +5,10 @@ Contains common functionality for both codemath and lqdoj agents.
 
 import os
 import platform
+import random
+import shutil
 import time
 from abc import ABC, abstractmethod
-from pathlib import Path
 
 import pyautogui
 import pyperclip
@@ -19,6 +20,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 from base_solver.base_llm import BaseGeminiSolver
+from base_solver.shared_utils import find_project_root
 from database.enums import SolvedStatus
 
 
@@ -37,11 +39,15 @@ class BaseAgent(ABC):
         select_file_submit: str = None,
         button_submit: str = None,
         problem_title_class: str = "problem-title",
+        profile_dir: str = None,
+        window_layout: tuple = None,
     ):
         """Initialize the base agent with solver and driver setup."""
-        self.project_root = Path(__file__).parent.parent
+        self.project_root = find_project_root()
         self.solver = self.create_solver()
         self.driver = None
+        self.profile_dir = profile_dir
+        self.window_layout = window_layout
         self.setup_driver()
         self.problem_code = None
         self.url_base = url_base
@@ -55,6 +61,8 @@ class BaseAgent(ABC):
         # For submitting problem
         self.select_file_submit = select_file_submit
         self.button_submit = button_submit
+
+        self.chrome_profile = None
 
     @abstractmethod
     def create_solver(self) -> BaseGeminiSolver:
@@ -72,13 +80,50 @@ class BaseAgent(ABC):
         options = webdriver.ChromeOptions()
 
         # Specify a fixed user profile directory
-        profile_dir = str(self.project_root / "chrome_profile")
+        # Use custom profile directory if provided, otherwise create temporary one
+        if self.profile_dir:
+            profile_dir = self.profile_dir
+        else:
+            # Get the base chrome profile from root directory
+            profile_dir_base = os.path.join(self.project_root, "chrome_profile")
+
+            # Check if base profile exists
+            if not os.path.exists(profile_dir_base):
+                print(f"⚠️ Base chrome profile not found at: {profile_dir_base}")
+                print("🔧 Creating new chrome profile...")
+                profile_dir = os.path.join(
+                    self.project_root,
+                    "chrome_profile_temp",
+                    f"chrome_profile_{random.randint(100000, 999999)}",
+                )
+                os.makedirs(profile_dir, exist_ok=True)
+            else:
+                # Create temporary profile by duplicating base profile
+                profile_dir = os.path.join(
+                    self.project_root,
+                    "chrome_profile_temp",
+                    f"chrome_profile_{random.randint(100000, 999999)}",
+                )
+                print(f"📋 Duplicating base profile from: {profile_dir_base}")
+                print(f"📋 To temporary profile: {profile_dir}")
+                shutil.copytree(profile_dir_base, profile_dir)
+
+        self.chrome_profile = profile_dir
+
         print(f"🔹 Profile directory: {profile_dir}")
         options.add_argument(f"--user-data-dir={profile_dir}")
         options.add_argument("--profile-directory=Default")
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option("useAutomationExtension", False)
+
+        # Set window size and position based on layout
+        x, y, width, height = (
+            self.window_layout if self.window_layout else (100, 100, 800, 600)
+        )
+
+        options.add_argument(f"--window-size={width},{height}")
+        options.add_argument(f"--window-position={x},{y}")
 
         # Disable extensions, infobars, sandbox, and dev shm usage
         options.add_argument("--disable-extensions")
@@ -207,14 +252,46 @@ class BaseAgent(ABC):
         Args:
             submission_file: Path to the solution file
         """
-        self.driver.get(self.get_submission_url())
-        time.sleep(1)
+        try:
+            print(f"📤 Submitting solution: {submission_file}")
 
-        file_input = self.driver.find_element(By.ID, self.select_file_submit)
-        submission_file = os.path.join(self.project_root, submission_file)
-        file_input.send_keys(submission_file)
-        self.click_button(path=self.button_submit, by_type="xpath")
-        time.sleep(3)
+            # Navigate to submission page
+            submission_url = self.get_submission_url()
+            print(f"🌐 Navigating to: {submission_url}")
+            self.driver.get(submission_url)
+            time.sleep(2)
+
+            # Check if file exists
+            full_path = os.path.join(self.project_root, submission_file)
+            if not os.path.exists(full_path):
+                print(f"❌ Solution file not found: {full_path}")
+                return False
+
+            print(f"✅ Solution file found: {full_path}")
+
+            # Find and fill file input
+            try:
+                file_input = self.driver.find_element(By.ID, self.select_file_submit)
+                file_input.send_keys(full_path)
+            except Exception as e:
+                print(f"❌ Error finding file input: {e}")
+                return False
+
+            # Click submit button
+            try:
+                self.click_button(path=self.button_submit, by_type="xpath")
+            except Exception as e:
+                print(f"❌ Error clicking submit button: {e}")
+                return False
+
+            # Wait for submission to complete
+            time.sleep(3)
+            print("✅ Solution submitted successfully")
+            return True
+
+        except Exception as e:
+            print(f"❌ Error submitting solution: {e}")
+            return False
 
     def get_problem_url(self) -> str:
         """
@@ -302,13 +379,21 @@ class BaseAgent(ABC):
                     print(f"✅ Solution generated: {solution_path}")
 
                     # Submit solution
-                    self.submit_problem(solution_path)
+                    submission_success = self.submit_problem(solution_path)
+                    if submission_success:
+                        print(f"✅ Problem {problem_code} submitted successfully")
+                    else:
+                        print(f"❌ Failed to submit solution for {problem_code}")
                 else:
                     print(f"❌ Failed to generate solution for {problem_code}")
 
             except Exception as e:
                 print(f"❌ Error processing problem {problem_code}: {e}")
                 continue
+            except KeyboardInterrupt:
+                print("❌ Keyboard interrupt detected. Exiting...")
+                self.cleanup()
+                break
 
         # Cleanup
         self.cleanup()
@@ -317,3 +402,11 @@ class BaseAgent(ABC):
         """Clean up resources and data"""
         if self.driver:
             self.driver.quit()
+
+        # Only cleanup temporary profiles (not the base profile)
+        if self.chrome_profile and "chrome_profile_temp" in self.chrome_profile:
+            try:
+                shutil.rmtree(self.chrome_profile)
+                print(f"🧹 Cleaned up temporary profile: {self.chrome_profile}")
+            except Exception as e:
+                print(f"⚠️ Failed to clean up profile {self.chrome_profile}: {e}")

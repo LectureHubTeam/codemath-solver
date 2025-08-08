@@ -3,6 +3,7 @@ import sqlite3
 from datetime import datetime
 from pathlib import Path
 
+from base_solver.shared_utils import normalize_points
 from database.enums import Difficulty, SolvedStatus
 
 from .crud import ProblemCRUD, SubmissionCRUD
@@ -85,14 +86,8 @@ class DatabaseManager:
             }
 
     def _get_points(self, points: str) -> int:
-        """Get points from string"""
-        if isinstance(points, int):
-            return points
-
-        if points.endswith("p"):
-            return int(float(points.replace("p", "")))
-
-        return int(float(points.replace(",", "")))
+        """Get points from string using normalized function"""
+        return normalize_points(points)
 
     def _get_ac_rate(self, ac_rate: str) -> float:
         """Get ac rate from string"""

@@ -1,5 +1,7 @@
 import pandas as pd
 
+from base_solver.shared_utils import normalize_points
+
 
 def get_filtered_problems(
     csv_file,
@@ -25,6 +27,12 @@ def get_filtered_problems(
 
     if sort_by in ["ac-rate", "users"]:
         df = df.sort_values(by=sort_by, ascending=ascending)
+    elif sort_by == "points":
+        # Normalize points for sorting
+        df["points_normalized"] = df["points"].apply(normalize_points)
+        df = df.sort_values(by="points_normalized", ascending=ascending)
+        # Remove temporary column
+        df = df.drop(columns=["points_normalized"])
 
     problems = df["problem-code"].tolist()
     if limit > 0:

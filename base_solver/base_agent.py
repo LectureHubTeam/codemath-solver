@@ -385,6 +385,10 @@ class BaseAgent(ABC):
 
     def process_problems(self, problems_code: list):
         """Process a list of problem codes"""
+        processed_count = 0
+        success_count = 0
+        error_count = 0
+
         for problem_code in problems_code:
             self.problem_code = problem_code
 
@@ -394,6 +398,8 @@ class BaseAgent(ABC):
                 print(f"✅ Problem `{problem_code}` already solved")
                 # Update database with solved status
                 self.update_problem_status(problem_code, SolvedStatus.SOLVED)
+                processed_count += 1
+                success_count += 1
                 continue
 
             print(f"\n🔄 Processing problem: {problem_code}")
@@ -439,21 +445,40 @@ class BaseAgent(ABC):
                             )
                         else:
                             print(f"ℹ️ Problem {problem_code} status unchanged")
+
+                        processed_count += 1
+                        success_count += 1
                     else:
                         print(f"❌ Failed to submit solution for {problem_code}")
+                        processed_count += 1
+                        error_count += 1
                 else:
                     print(f"❌ Failed to generate solution for {problem_code}")
+                    processed_count += 1
+                    error_count += 1
 
             except Exception as e:
                 print(f"❌ Error processing problem {problem_code}: {e}")
+                processed_count += 1
+                error_count += 1
                 continue
             except KeyboardInterrupt:
                 print("❌ Keyboard interrupt detected. Exiting...")
                 self.cleanup()
                 break
 
+        # Print summary
+        print("\n📊 Processing Summary:")
+        print(f"   Total problems: {len(problems_code)}")
+        print(f"   Processed: {processed_count}")
+        print(f"   Successful: {success_count}")
+        print(f"   Errors: {error_count}")
+
         # Cleanup
         self.cleanup()
+
+        # Return True if at least one problem was processed successfully
+        return processed_count > 0
 
     def check_and_update_problems_status(self, problems_code: list):
         """Check and update the status of multiple problems in the database"""

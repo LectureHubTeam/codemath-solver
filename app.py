@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 
 from conf.settings import DEFAULT_PLATFORM, PLATFORMS
@@ -15,6 +17,9 @@ class MultiPlatformSolverApp:
         if "max_workers" not in st.session_state:
             st.session_state.max_workers = 2
 
+        # Initialize platform-specific session state for current platform
+        self.initialize_platform_session_state(st.session_state.current_platform)
+
     def platform_selector(self):
         st.sidebar.header("Platform Selection")
         platform = st.sidebar.selectbox(
@@ -25,10 +30,56 @@ class MultiPlatformSolverApp:
 
         if platform != st.session_state.current_platform:
             st.session_state.current_platform = platform
-            st.session_state.selected_problems = []
-            st.session_state.data_loaded = False
-            st.session_state.df = None
+            # Reset platform-specific session state
+            self.reset_platform_session_state(platform)
             st.rerun()
+
+    def reset_platform_session_state(self, platform: str):
+        """Reset session state variables specific to the selected platform"""
+        # Reset general variables
+        st.session_state.selected_problems = []
+        st.session_state.data_loaded = False
+        st.session_state.df = None
+
+        # Reset platform-specific variables
+        platform_key = f"{platform}_data_loaded"
+        df_key = f"{platform}_df"
+        selected_problems_key = f"{platform}_selected_problems"
+
+        # Clear platform-specific session state
+        if platform_key in st.session_state:
+            del st.session_state[platform_key]
+        if df_key in st.session_state:
+            del st.session_state[df_key]
+        if selected_problems_key in st.session_state:
+            del st.session_state[selected_problems_key]
+
+        # Initialize the new platform's session state
+        self.initialize_platform_session_state(platform)
+
+    def initialize_platform_session_state(self, platform: str):
+        """Initialize platform-specific session state variables"""
+        # Get the CSV file path for the platform
+        platform_config = PLATFORMS[platform]
+        csv_file = platform_config.get("csv_file", f"{platform}_problems_data.csv")
+
+        # Initialize platform-specific keys
+        data_loaded_key = f"{platform}_data_loaded"
+        df_key = f"{platform}_df"
+        selected_problems_key = f"{platform}_selected_problems"
+
+        # Set default values if not already set
+        if data_loaded_key not in st.session_state:
+            st.session_state[data_loaded_key] = os.path.exists(csv_file)
+        if df_key not in st.session_state:
+            st.session_state[df_key] = None
+        if selected_problems_key not in st.session_state:
+            st.session_state[selected_problems_key] = []
+
+        # Set current platform's data as active
+        st.session_state.data_loaded = st.session_state[data_loaded_key]
+        st.session_state.df = st.session_state[df_key]
+        st.session_state.selected_problems = st.session_state[selected_problems_key]
 
     def parallel_processing_settings(self):
         """Parallel processing configuration"""

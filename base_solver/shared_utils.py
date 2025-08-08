@@ -352,3 +352,37 @@ def get_screen_resolution() -> Tuple[int, int]:
         Tuple (width, height) of the screen
     """
     return pyautogui.size()
+
+
+def normalize_points(points_value):
+    """
+    Normalize points from various formats to integer.
+
+    Args:
+        points_value: Points value in various formats (str, int, float)
+                     Examples: "1,00", "100", "200", "1000p", 100, 1.5
+
+    Returns:
+        int: Normalized points value
+    """
+    if points_value is None or points_value == "":
+        return 0
+
+    # Convert to string for processing
+    points_str = str(points_value).strip()
+
+    # Remove 'p' suffix if present
+    if points_str.endswith("p"):
+        points_str = points_str[:-1]
+
+    # Remove commas and convert to float
+    points_str = points_str.replace(",", "")
+
+    try:
+        # Convert to float first to handle decimal points
+        points_float = float(points_str)
+        # Convert to integer (round down for decimal values)
+        return int(points_float)
+    except (ValueError, TypeError):
+        # If conversion fails, return 0
+        return 0

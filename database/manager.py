@@ -1,5 +1,6 @@
 import os
 import sqlite3
+from datetime import datetime
 from pathlib import Path
 
 from database.enums import Difficulty, SolvedStatus
@@ -197,3 +198,34 @@ class DatabaseManager:
             stats["problems_by_category"] = dict(cursor.fetchall())
 
             return stats
+
+    def update_problem_status(
+        self, problem_code: str, platform_id: int, status: SolvedStatus
+    ):
+        """Update the solved status of a problem in the database"""
+        try:
+            # Get the problem from database
+            problem = self.problems.get_by_code_and_platform(problem_code, platform_id)
+
+            if problem:
+                # Update the solved status
+                problem.solved_status = status.value
+                problem.updated_at = datetime.now()
+
+                # Update in database
+                success = self.problems.update(problem)
+                if success:
+                    print(
+                        f"✅ Updated problem {problem_code} status to {status.name} in database"
+                    )
+                else:
+                    print(
+                        f"❌ Failed to update problem {problem_code} status in database"
+                    )
+            else:
+                print(
+                    f"⚠️ Problem {problem_code} not found in database for platform {platform_id}"
+                )
+
+        except Exception as e:
+            print(f"❌ Error updating problem status: {str(e)}")

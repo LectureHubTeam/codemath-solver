@@ -22,6 +22,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from base_solver.base_llm import BaseGeminiSolver
 from base_solver.shared_utils import find_project_root
 from database.enums import SolvedStatus
+from database.manager import DatabaseManager
 
 
 class BaseAgent(ABC):
@@ -63,6 +64,21 @@ class BaseAgent(ABC):
         self.button_submit = button_submit
 
         self.chrome_profile = None
+
+        # Initialize database manager
+        self.db_manager = DatabaseManager()
+
+        # Determine platform ID based on prefix
+        self.platform_id = self._get_platform_id()
+
+    def _get_platform_id(self) -> int:
+        """Get platform ID based on prefix"""
+        if self.prefix == "codemath":
+            return 1  # CodeMath platform ID
+        elif self.prefix == "lqdoj":
+            return 2  # LQDOJ platform ID
+        else:
+            raise ValueError(f"Unknown platform prefix: {self.prefix}")
 
     @abstractmethod
     def create_solver(self) -> BaseGeminiSolver:
@@ -195,6 +211,9 @@ class BaseAgent(ABC):
 
         time.sleep(0.5)
 
+        # Clear clipboard
+        pyperclip.copy("")
+
     def press_enter(self):
         """Press Enter key using platform-specific method"""
         pyautogui.press("enter")
@@ -232,9 +251,12 @@ class BaseAgent(ABC):
         self.press_enter()
         self.type_via_clipboard(file_name)
 
+        # wait for file to be downloaded
+        time.sleep(wait_time)
+
         attemps = 0
         while not self.check_file_exists(file_downloaded) and attemps < 3:
-            print(f"Trying to download file {file_name} - {attemps} times")
+            print(f"Trying to download file {file_name} - {attemps + 1} times")
             self.press_enter()
             self.type_via_clipboard(file_name)
             attemps += 1
@@ -353,12 +375,25 @@ class BaseAgent(ABC):
             print(f"❌ Error checking solved status: {str(e)}")
             return SolvedStatus.NOT_SOLVED
 
+    def update_problem_status(self, problem_code: str, status: SolvedStatus):
+        """Update the problem status in the database"""
+        self.db_manager.update_problem_status(
+            problem_code=problem_code,
+            platform_id=self.platform_id,
+            status=status,
+        )
+
     def process_problems(self, problems_code: list):
         """Process a list of problem codes"""
         for problem_code in problems_code:
             self.problem_code = problem_code
-            if self.check_solved_status() == SolvedStatus.SOLVED:
+
+            # Check initial solved status
+            initial_status = self.check_solved_status()
+            if initial_status == SolvedStatus.SOLVED:
                 print(f"✅ Problem `{problem_code}` already solved")
+                # Update database with solved status
+                self.update_problem_status(problem_code, SolvedStatus.SOLVED)
                 continue
 
             print(f"\n🔄 Processing problem: {problem_code}")
@@ -382,6 +417,28 @@ class BaseAgent(ABC):
                     submission_success = self.submit_problem(solution_path)
                     if submission_success:
                         print(f"✅ Problem {problem_code} submitted successfully")
+
+                        # Wait a bit for the submission to be processed
+                        time.sleep(5)
+
+                        # Check if the problem is now solved
+                        final_status = self.check_solved_status()
+                        if final_status == SolvedStatus.SOLVED:
+                            print(f"🎉 Problem {problem_code} is now SOLVED!")
+                            # Update database with solved status
+                            self.update_problem_status(
+                                problem_code, SolvedStatus.SOLVED
+                            )
+                        elif final_status == SolvedStatus.UNSOLVED:
+                            print(
+                                f"⚠️ Problem {problem_code} was attempted but not solved"
+                            )
+                            # Update database with unsolved status
+                            self.update_problem_status(
+                                problem_code, SolvedStatus.UNSOLVED
+                            )
+                        else:
+                            print(f"ℹ️ Problem {problem_code} status unchanged")
                     else:
                         print(f"❌ Failed to submit solution for {problem_code}")
                 else:
@@ -397,6 +454,32 @@ class BaseAgent(ABC):
 
         # Cleanup
         self.cleanup()
+
+    def check_and_update_problems_status(self, problems_code: list):
+        """Check and update the status of multiple problems in the database"""
+        print(f"\n🔍 Checking status for {len(problems_code)} problems...")
+
+        for problem_code in problems_code:
+            self.problem_code = problem_code
+            try:
+                # Check current solved status
+                status = self.check_solved_status()
+
+                # Update database with current status
+                self.update_problem_status(problem_code, status)
+
+                if status == SolvedStatus.SOLVED:
+                    print(f"✅ Problem `{problem_code}` is SOLVED")
+                elif status == SolvedStatus.UNSOLVED:
+                    print(f"⚠️ Problem `{problem_code}` was attempted but not solved")
+                else:
+                    print(f"❓ Problem `{problem_code}` not attempted yet")
+
+            except Exception as e:
+                print(f"❌ Error checking status for problem {problem_code}: {e}")
+                continue
+
+        print("✅ Status check completed!")
 
     def cleanup(self):
         """Clean up resources and data"""

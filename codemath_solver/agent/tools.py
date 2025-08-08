@@ -128,6 +128,6 @@ def run_parallel_processing(problem_ids: list, max_workers: int = 2):
 
 
 if __name__ == "__main__":
-    problem_ids = ["chiabi", "tphng"]
-    max_workers = 2
+    problem_ids = ["chaythi_hd_bp24"]
+    max_workers = 1
     run_parallel_processing(problem_ids, max_workers)

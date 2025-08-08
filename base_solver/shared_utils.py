@@ -3,11 +3,15 @@ Shared utilities for both codemath_solver and lqdoj_solver modules.
 Contains common functions that can be reused across different solvers.
 """
 
+import math
 import os
+import random
 import re
 import shutil
-from typing import Optional
+from pathlib import Path
+from typing import List, Optional, Tuple
 
+import pyautogui
 import pymupdf4llm
 
 
@@ -196,3 +200,155 @@ def extract_python_code(response_text: str) -> Optional[str]:
             print(response_text)
             print("---\nCannot extract code.")
             return None
+
+
+def find_project_root(marker_file=".git"):
+    """
+    Find the project root directory by traversing up from the current working directory
+    until a marker file (e.g., .git or pyproject.toml) is found.
+    """
+    current = Path.cwd().resolve()
+    for parent in [current] + list(current.parents):
+        if (parent / marker_file).exists():
+            return parent
+    raise FileNotFoundError(f"Could not find project root containing {marker_file}")
+
+
+def chunk_list(lst: list, n: int) -> List[List]:
+    """
+    Split list into n nearly equal parts.
+
+    Args:
+        lst: List to split
+        n: Number of parts to split into
+
+    Returns:
+        List of sublists
+    """
+    chunk_size = math.ceil(len(lst) / n)
+    return [lst[i : i + chunk_size] for i in range(0, len(lst), chunk_size)]
+
+
+def calculate_window_layout(
+    num_workers: int, screen_width: int = 1920, screen_height: int = 1080
+) -> List[Tuple[int, int, int, int]]:
+    """
+    Calculate window layout for Chrome windows based on number of workers.
+
+    Args:
+        num_workers: Number of workers (windows)
+        screen_width: Screen width
+        screen_height: Screen height
+
+    Returns:
+        List of tuples (x, y, width, height) for each window
+    """
+    # Default window size
+    window_width = 800
+    window_height = 600
+
+    # Calculate layout based on number of workers
+    if num_workers <= 2:
+        # 2 windows: side by side
+        cols = 2
+        rows = 1
+    elif num_workers <= 4:
+        # 3-4 windows: 2x2 grid
+        cols = 2
+        rows = 2
+    elif num_workers <= 6:
+        # 5-6 windows: 3x2 grid
+        cols = 3
+        rows = 2
+    else:
+        # 7+ windows: 3x3 grid (maximum 9 windows)
+        cols = 3
+        rows = 3
+
+    # Calculate distance between windows
+    margin_x = 50
+    margin_y = 50
+
+    # Calculate actual window size
+    available_width = screen_width - (cols + 1) * margin_x
+    available_height = screen_height - (rows + 1) * margin_y
+
+    actual_width = min(window_width, available_width // cols)
+    actual_height = min(window_height, available_height // rows)
+
+    # Create layout for each window
+    layouts = []
+    for i in range(min(num_workers, cols * rows)):
+        row = i // cols
+        col = i % cols
+
+        x = margin_x + col * (actual_width + margin_x)
+        y = margin_y + row * (actual_height + margin_y)
+
+        # Ensure windows don't go off-screen
+        x = max(0, min(x, screen_width - actual_width))
+        y = max(0, min(y, screen_height - actual_height))
+
+        layouts.append((x, y, actual_width, actual_height))
+
+    return layouts
+
+
+def create_temp_profile() -> str:
+    """
+    Create a temporary profile directory for each process by duplicating from base profile.
+
+    Returns:
+        Path to temporary profile directory
+    """
+
+    # Get project root
+    project_root = find_project_root()
+    base_profile_dir = os.path.join(project_root, "chrome_profile")
+
+    # Create temp directory
+    temp_dir = os.path.join(
+        project_root,
+        "chrome_profile_temp",
+        f"chrome_profile_{random.randint(100000, 999999)}",
+    )
+
+    # Check if base profile exists and duplicate it
+    if os.path.exists(base_profile_dir):
+        print(f"📋 Duplicating base profile from: {base_profile_dir}")
+        print(f"📋 To temporary profile: {temp_dir}")
+        shutil.copytree(base_profile_dir, temp_dir)
+    else:
+        print(f"⚠️ Base chrome profile not found at: {base_profile_dir}")
+        print("🔧 Creating new chrome profile...")
+        os.makedirs(temp_dir, exist_ok=True)
+
+    print(f"🔄 Created temporary profile: {temp_dir}")
+    return temp_dir
+
+
+def cleanup_temp_profile(profile_dir: str) -> None:
+    """
+    Cleanup temporary profile directory.
+
+    Args:
+        profile_dir: Path đến temporary profile directory
+    """
+    try:
+        shutil.rmtree(profile_dir)
+        print(f"🧹 Cleaned up temporary profile: {profile_dir}")
+    except Exception as e:
+        print(f"⚠️ Failed to clean up profile {profile_dir}: {e}")
+
+
+def get_screen_resolution() -> Tuple[int, int]:
+    """
+    Get the screen resolution.
+
+    Args:
+        None
+
+    Returns:
+        Tuple (width, height) of the screen
+    """
+    return pyautogui.size()

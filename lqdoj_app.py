@@ -1,4 +1,5 @@
 import os
+import time
 
 import pandas as pd
 import streamlit as st
@@ -170,17 +171,64 @@ class LQDOJSolverApp:
             pd.DataFrame(st.session_state.selected_problems, columns=["Problem Code"])
         )
 
+        # Parallel processing options
+        col1, col2 = st.columns(2)
+        with col1:
+            use_parallel = st.checkbox(
+                "Use Parallel Processing",
+                value=st.session_state.get("parallel_processing", False),
+                help="Enable multi-processing for faster execution",
+            )
+
+        with col2:
+            if use_parallel:
+                max_workers = st.slider(
+                    "Number of Workers",
+                    min_value=1,
+                    max_value=4,
+                    value=st.session_state.get("max_workers", 2),
+                    help="Number of parallel processes",
+                )
+            else:
+                max_workers = 1
+
         if st.button("Start Processing"):
             with st.spinner("Processing selected problems... This may take a while."):
-                # Initialize agent only when needed for processing
-                if self.agent is None:
-                    from lqdoj_solver.agent.tools import LQDOJAgent
+                try:
+                    if use_parallel and max_workers > 1:
+                        # Use parallel processing
+                        from lqdoj_solver.agent.tools import run_parallel_processing
 
-                    self.agent = LQDOJAgent()
-                if self.agent.process_problems(st.session_state.selected_problems):
-                    st.success("Processing script finished.")
-                else:
-                    st.error("Processing script failed.")
+                        st.info(
+                            f"🚀 Starting parallel processing with {max_workers} workers..."
+                        )
+                        start_time = time.time()
+
+                        run_parallel_processing(
+                            st.session_state.selected_problems, max_workers
+                        )
+
+                        end_time = time.time()
+                        st.success(
+                            f"✅ Parallel processing completed in {end_time - start_time:.2f} seconds!"
+                        )
+                    else:
+                        # Use sequential processing
+                        if self.agent is None:
+                            from lqdoj_solver.agent.tools import LQDOJAgent
+
+                            self.agent = LQDOJAgent()
+
+                        if self.agent.process_problems(
+                            st.session_state.selected_problems
+                        ):
+                            st.success("Processing script finished.")
+                        else:
+                            st.error("Processing script failed.")
+
+                except Exception as e:
+                    st.error(f"Error during processing: {e}")
+                    st.exception(e)
 
     def cleanup(self):
         if self.agent and hasattr(self.agent, "driver"):

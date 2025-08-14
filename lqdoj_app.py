@@ -158,6 +158,16 @@ class LQDOJSolverApp:
 
             st.subheader("🔍 Filter & Select Problems")
 
+            # Optional database-backed selection as alternative UI in expander
+            try:
+                from app import (
+                    MultiPlatformSolverApp as _AppShim,  # local import to avoid cycles
+                )
+
+                _AppShim().database_selection_section("lqdoj", inline=True)
+            except Exception:
+                pass
+
             st.dataframe(df.head())
 
             # LQDOJ có thể có difficulty thay vì category

@@ -4,14 +4,11 @@ Contains common functionality for both codemath and lqdoj agents.
 """
 
 import os
-import platform
 import random
 import shutil
 import time
 from abc import ABC, abstractmethod
 
-import pyautogui
-import pyperclip
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -20,7 +17,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 from base_solver.base_llm import BaseGeminiSolver
-from base_solver.shared_utils import find_project_root
+from base_solver.shared_utils import (
+    check_file_exists,
+    delete_abnormal_files,
+    find_project_root,
+    press_enter,
+    type_via_clipboard,
+)
 from database.enums import SolvedStatus
 from database.manager import DatabaseManager
 
@@ -195,76 +198,105 @@ class BaseAgent(ABC):
         except Exception as e:
             print(f"❌ Button not found: {e}")
 
-    def type_via_clipboard(self, text: str):
-        """Type text using clipboard to avoid keyboard layout issues"""
-        pyperclip.copy(text)
-        time.sleep(0.5)
-        # print(f"📋 Copied to clipboard: {pyperclip.paste()}")
-
-        system = platform.system()
-        if system == "Darwin":  # macOS
-            pyautogui.hotkey("command", "v", interval=0.5)
-        elif system == "Windows":
-            pyautogui.hotkey("ctrl", "v", interval=0.5)
-        else:  # Linux
-            pyautogui.hotkey("ctrl", "v", interval=0.5)
-
-        time.sleep(0.5)
-
-        # Clear clipboard
-        pyperclip.copy("")
-
-    def press_enter(self):
-        """Press Enter key using platform-specific method"""
-        pyautogui.press("enter")
-
-    def check_file_exists(self, file_name: str):
-        """Check if file exists in the data folder"""
-        return os.path.exists(os.path.join(self.project_root, "data", file_name))
-
     def download_problem(
         self,
         file_name: str,
         element_path="pdf_button",
         element_type="id",
         wait_time: int = 3,
+        max_retries: int = 5,
     ):
         """
-        Download problem PDF from the website.
+        Download problem PDF from the website with improved error handling.
 
         Args:
             file_name: Name for the downloaded file
+            element_path: Path to the download button
+            element_type: Type of element selector
+            wait_time: Base wait time in seconds
+            max_retries: Maximum number of retry attempts
         """
+        # Ensure file has .pdf extension
         if not file_name.endswith(".pdf"):
             file_name = f"{file_name}.pdf"
-        file_downloaded = os.path.join(self.project_root, "data", file_name)
-        if self.check_file_exists(file_downloaded):
+
+        # Ensure data directory exists
+        data_dir = os.path.join(self.project_root, "data")
+        os.makedirs(data_dir, exist_ok=True)
+
+        file_downloaded = os.path.join(data_dir, file_name)
+
+        # Check if file already exists
+        if check_file_exists(file_downloaded):
             print(f"✅ File already downloaded: {file_downloaded}")
             return file_downloaded
 
-        self.click_button(path=element_path, by_type=element_type)
+        print(f"🔄 Starting download for: {file_name}")
+
+        # Step 1: Click download button
+        try:
+            self.click_button(path=element_path, by_type=element_type)
+            print(f"✅ Clicked download button: {element_path}")
+        except Exception as e:
+            print(f"❌ Failed to click download button: {e}")
+            raise Exception(f"Download button not found: {element_path}")
+
         time.sleep(wait_time * 2)
-        print("📂 Pressing Enter to save PDF...")
-        self.press_enter()
-        time.sleep(wait_time)
+        press_enter(wait_time=wait_time * 2.5)
+        type_via_clipboard(file_name)
+        press_enter(wait_time=wait_time)
 
-        self.press_enter()
-        self.type_via_clipboard(file_name)
+        # Step 2: Wait for download dialog and handle it
+        attempts = 0
+        download_success = True if check_file_exists(file_downloaded) else False
 
-        # wait for file to be downloaded
-        time.sleep(wait_time)
+        while attempts < max_retries and not download_success:
+            attempts += 1
+            print(f" Download attempt {attempts}/{max_retries}")
 
-        attemps = 0
-        while not self.check_file_exists(file_downloaded) and attemps < 3:
-            print(f"Trying to download file {file_name} - {attemps + 1} times")
-            self.press_enter()
-            self.type_via_clipboard(file_name)
-            attemps += 1
-            time.sleep(wait_time + attemps)
-        if not self.check_file_exists(file_downloaded):
-            raise Exception(f"❌ Failed to download file {file_name}")
+            # Clear pdf file downloaded without renaming
+            delete_abnormal_files()
 
-        print(f"✅ File downloaded: {file_downloaded}")
+            try:
+                # Type filename
+                type_via_clipboard(file_name, wait_time=wait_time / 2)
+                print(f"📝 Typed filename: {file_name}")
+
+                # Press Enter to save
+                press_enter(wait_time=wait_time * 2)
+                print("💾 Pressed Enter to save file")
+
+                # Check if file was downloaded
+                if check_file_exists(file_downloaded):
+                    download_success = True
+                    print(f"✅ Download successful: {file_downloaded}")
+                    break
+                else:
+                    print(f"⚠️ File not found after attempt {attempts}, retrying...")
+                    time.sleep(wait_time)
+
+            except Exception as e:
+                print(f"❌ Error during download attempt {attempts}: {e}")
+                if attempts < max_retries:
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    break
+
+        # Final check
+        if not check_file_exists(file_downloaded):
+            error_msg = (
+                f"❌ Failed to download file {file_name} after {max_retries} attempts"
+            )
+            print(f" Expected location: {file_downloaded}")
+            raise Exception(error_msg)
+
+        # Verify file size
+        file_size = os.path.getsize(file_downloaded)
+        if file_size == 0:
+            print(f"⚠️ Warning: Downloaded file is empty: {file_downloaded}")
+
+        print(f"✅ File downloaded successfully: {file_downloaded} ({file_size} bytes)")
         return file_downloaded
 
     def submit_problem(self, submission_file: str):
@@ -454,11 +486,13 @@ class BaseAgent(ABC):
                         error_count += 1
                 else:
                     print(f"❌ Failed to generate solution for {problem_code}")
+                    self.update_problem_status(problem_code, SolvedStatus.ERROR)
                     processed_count += 1
                     error_count += 1
 
             except Exception as e:
                 print(f"❌ Error processing problem {problem_code}: {e}")
+                self.update_problem_status(problem_code, SolvedStatus.ERROR)
                 processed_count += 1
                 error_count += 1
                 continue

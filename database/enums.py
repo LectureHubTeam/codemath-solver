@@ -2,6 +2,7 @@ import enum
 
 
 class SolvedStatus(enum.IntEnum):
+    ERROR = -2
     NOT_SOLVED = -1
     UNSOLVED = 0
     SOLVED = 1

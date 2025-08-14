@@ -5,14 +5,17 @@ Contains common functions that can be reused across different solvers.
 
 import math
 import os
+import platform
 import random
 import re
 import shutil
+import time
 from pathlib import Path
 from typing import List, Optional, Tuple
 
 import pyautogui
 import pymupdf4llm
+import pyperclip
 
 
 def clear_data(folder_path: str = "data"):
@@ -31,6 +34,55 @@ def clear_data(folder_path: str = "data"):
                 shutil.rmtree(file_path)
         except Exception as e:
             print(f"Error deleting {file_path}: {e}")
+
+
+def delete_abnormal_files(folder_path: str = "data"):
+    """
+    Delete files that don't have the expected naming pattern.
+    """
+    for file in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, file)
+        if os.path.isfile(file_path):
+            if not (file.startswith("codemath_") or file.startswith("lqdoj_")):
+                print(f"Deleting abnormal file: {file_path}")
+                try:
+                    os.remove(file_path)
+                except Exception as e:
+                    print(f"Error deleting {file_path}: {e}")
+
+
+def check_file_exists(file_name: str):
+    """
+    Check if file exists at the given path
+    """
+    return os.path.exists(file_name)
+
+
+def press_enter(wait_time: int = 0.5):
+    """Press Enter key using platform-specific method"""
+    pyautogui.press("enter")
+    time.sleep(wait_time)
+
+
+def type_via_clipboard(text: str, wait_time: int = 0.5):
+    """Type text using clipboard to avoid keyboard layout issues"""
+    pyperclip.copy(text)
+    time.sleep(0.5)
+
+    system = platform.system()
+    if system == "Darwin":  # macOS
+        pyautogui.hotkey("command", "v", interval=0.5)
+    elif system == "Windows":
+        pyautogui.hotkey("ctrl", "v", interval=0.5)
+    else:  # Linux
+        pyautogui.hotkey("ctrl", "v", interval=0.5)
+
+    time.sleep(0.5)
+
+    # Clear clipboard
+    pyperclip.copy("")
+
+    time.sleep(wait_time)
 
 
 def extract_pdf_data(file_name: str) -> str:

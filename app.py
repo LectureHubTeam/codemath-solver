@@ -1,5 +1,6 @@
 import os
 
+import pandas as pd
 import streamlit as st
 
 from conf.settings import DEFAULT_PLATFORM, PLATFORMS
@@ -129,28 +130,178 @@ class MultiPlatformSolverApp:
                 except Exception as e:
                     st.sidebar.error(f"Error calculating layout: {e}")
 
+    def _get_platform_id(self, platform_key: str) -> int:
+        if platform_key == "codemath":
+            return 1
+        elif platform_key == "lqdoj":
+            return 2
+        else:
+            raise ValueError(f"Unknown platform: {platform_key}")
+
+    def database_selection_section(self, platform_key: str, inline: bool = False):
+        platform_id = self._get_platform_id(platform_key)
+        from database.manager import DatabaseManager
+
+        db = DatabaseManager()
+
+        container = (
+            st.expander("Alternative: Select Problems from Database", expanded=False)
+            if inline
+            else st.container()
+        )
+        with container:
+            if not inline:
+                st.header("2. Select Problems (Database)")
+
+            # Filters
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                solved_map = {"All": None, "Unsolved": -1, "Unfinished": 0, "Solved": 1}
+                solved_label = st.selectbox(
+                    "Solved Status",
+                    list(solved_map.keys()),
+                    index=0,
+                    key=f"db_solved_{platform_key}",
+                )
+                solved_value = solved_map[solved_label]
+            with col2:
+                search_text = st.text_input(
+                    "Search code/name contains", "", key=f"db_search_{platform_key}"
+                )
+            with col3:
+                sort_by = st.selectbox(
+                    "Sort by",
+                    ["created_at", "ac_rate", "users_solved", "points"],
+                    index=0,
+                    key=f"db_sort_{platform_key}",
+                )
+            with col4:
+                ascending = st.checkbox(
+                    "Ascending", value=False, key=f"db_asc_{platform_key}"
+                )
+
+            limit = st.number_input(
+                "Limit (0 for all)",
+                min_value=0,
+                value=20,
+                key=f"db_limit_{platform_key}",
+            )
+
+            # Build query
+            where_clauses = ["platform = :platform"]
+            params = {"platform": platform_id}
+            if solved_value is not None:
+                where_clauses.append("solved_status = :solved_status")
+                params["solved_status"] = solved_value
+            if search_text:
+                where_clauses.append("(problem_code LIKE :q OR problem_name LIKE :q)")
+                params["q"] = f"%{search_text}%"
+            where_sql = " AND ".join(where_clauses)
+            order_sql = f"ORDER BY {sort_by} {'ASC' if ascending else 'DESC'}"
+            limit_sql = "" if limit == 0 else "LIMIT :limit"
+            if limit != 0:
+                params["limit"] = int(limit)
+
+            query = f"""
+                SELECT problem_code, problem_name, category, difficulty, points, ac_rate, users_solved, solved_status, created_at
+                FROM problems
+                WHERE {where_sql}
+                {order_sql}
+                {limit_sql}
+            """  # noqa: E501
+
+            with db.get_connection() as conn:
+                df = pd.read_sql_query(query, conn, params=params)
+
+            # Fix data type issues for Streamlit display
+            if not df.empty:
+                # Convert difficulty column to handle empty strings and ensure proper type
+                if "difficulty" in df.columns:
+                    # Replace empty strings with None/null values
+                    df["difficulty"] = df["difficulty"].replace("", None)
+                    # Convert to numeric, coercing errors to NaN
+                    df["difficulty"] = pd.to_numeric(df["difficulty"], errors="coerce")
+
+                # Ensure other numeric columns are properly typed
+                numeric_columns = ["points", "ac_rate", "users_solved", "solved_status"]
+                for col in numeric_columns:
+                    if col in df.columns:
+                        df[col] = pd.to_numeric(df[col], errors="coerce")
+
+            st.subheader("📊 Preview")
+            st.dataframe(df, use_container_width=True)
+
+            # Selection summary and options
+            current_count = len(st.session_state.get("selected_problems", []))
+            st.caption(f"Currently selected: {current_count} problems")
+            shuffle_before_apply = st.checkbox(
+                "Shuffle results before apply",
+                value=False,
+                key=f"db_shuffle_{platform_key}",
+                help="Randomize the order of the problems returned from database before applying",
+            )
+
+            # Apply controls
+            apply_col1, apply_col2 = st.columns([1, 1])
+            with apply_col1:
+                if st.button(
+                    "Add to Selected (Database)",
+                    key=f"db_add_{platform_key}",
+                    use_container_width=True,
+                ):
+                    import random
+
+                    new_codes = df["problem_code"].tolist()
+                    if shuffle_before_apply:
+                        random.shuffle(new_codes)
+                    # Add without duplicates, preserve existing order
+                    existing = st.session_state.get("selected_problems", [])
+                    combined = existing + [c for c in new_codes if c not in existing]
+                    st.session_state.selected_problems = combined
+                    st.success(
+                        f"✅ Added {len(new_codes)} problems from database (total now {len(combined)})"
+                    )
+            with apply_col2:
+                if st.button(
+                    "Replace Selected (Database)",
+                    key=f"db_replace_{platform_key}",
+                    use_container_width=True,
+                ):
+                    import random
+
+                    new_codes = df["problem_code"].tolist()
+                    if shuffle_before_apply:
+                        random.shuffle(new_codes)
+                    st.session_state.selected_problems = new_codes
+                    st.success(
+                        f"✅ Replaced selection with {len(new_codes)} problems from database"
+                    )
+
     def run(self):
         st.set_page_config(layout="wide")
         self.platform_selector()
         self.parallel_processing_settings()
-
-        platform_config = PLATFORMS[st.session_state.current_platform]
+        platform_key = st.session_state.current_platform
+        platform_config = PLATFORMS[platform_key]
         st.title(f"{platform_config['name']} Solver")
 
         # Import và chạy app tương ứng
         try:
-            if st.session_state.current_platform == "codemath":
+            if platform_key == "codemath":
                 from codemath_app import CodeMathSolverApp
 
                 app = CodeMathSolverApp()
                 app.crawl_section()
+                # Always use original UI/UX selection from platform app
                 app.selection_section()
+                # Optional: add database selection as an alternative button within selection section? (kept out to preserve UI)
                 app.processing_section()
-            elif st.session_state.current_platform == "lqdoj":
+            elif platform_key == "lqdoj":
                 from lqdoj_app import LQDOJSolverApp
 
                 app = LQDOJSolverApp()
                 app.crawl_section()
+                # Always use original UI/UX selection from platform app
                 app.selection_section()
                 app.processing_section()
         finally:

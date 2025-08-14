@@ -149,6 +149,15 @@ class CodeMathSolverApp:
                 st.dataframe(df.head(10), use_container_width=True)
 
             st.subheader("🔍 Filter & Select Problems")
+            # Optional database-backed selection as alternative UI in expander
+            try:
+                from app import (
+                    MultiPlatformSolverApp as _AppShim,  # local import to avoid cycles
+                )
+
+                _AppShim().database_selection_section("codemath", inline=True)
+            except Exception:
+                pass
 
             categories = ["Any", "Cơ bản", "Nâng cao", "Vận dụng linh hoạt"]
             sort_options = ["ac-rate", "users", "points"]
